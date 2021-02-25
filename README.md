@@ -1,4 +1,4 @@
-# Lamazon
+# <h1>Lamazon<h1>
 Practical ASP.NET app development
 
 <h2>Building a project called "Lamazon" with Entity Framework Core which is modern object-relational mapper<h2>
