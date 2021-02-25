@@ -1,0 +1,9 @@
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.deps.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.AssemblyInfoInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.AssemblyInfo.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Domain\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.csprojAssemblyReference.cache

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Lamazon.DataAccess\SEDC.Lamazon.DataAccess.csproj" />
+    <ProjectReference Include="..\SEDC.Lamazon.Domain\SEDC.Lamazon.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
