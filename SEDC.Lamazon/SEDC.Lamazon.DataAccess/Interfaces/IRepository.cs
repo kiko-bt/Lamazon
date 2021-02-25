@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SEDC.Lamazon.DataAccess.Repositories
+namespace SEDC.Lamazon.DataAccess.Interfaces
 {
     public interface IRepository<T>
     {
