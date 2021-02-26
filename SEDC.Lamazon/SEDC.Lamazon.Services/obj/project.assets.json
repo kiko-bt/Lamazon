@@ -1278,6 +1278,16 @@
         "runtime": {
           "bin/placeholder/SEDC.Lamazon.Domain.dll": {}
         }
+      },
+      "SEDC.Lamazon.WebModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SEDC.Lamazon.WebModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEDC.Lamazon.WebModels.dll": {}
+        }
       }
     }
   },
@@ -4953,12 +4963,18 @@
       "type": "project",
       "path": "../SEDC.Lamazon.Domain/SEDC.Lamazon.Domain.csproj",
       "msbuildProject": "../SEDC.Lamazon.Domain/SEDC.Lamazon.Domain.csproj"
+    },
+    "SEDC.Lamazon.WebModels/1.0.0": {
+      "type": "project",
+      "path": "../SEDC.Lamazon.WebModels/SEDC.Lamazon.WebModels.csproj",
+      "msbuildProject": "../SEDC.Lamazon.WebModels/SEDC.Lamazon.WebModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "SEDC.Lamazon.DataAccess >= 1.0.0",
-      "SEDC.Lamazon.Domain >= 1.0.0"
+      "SEDC.Lamazon.Domain >= 1.0.0",
+      "SEDC.Lamazon.WebModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4993,6 +5009,9 @@
             },
             "C:\\Users\\Hristijan\\Desktop\\Lamazon\\SEDC.Lamazon\\SEDC.Lamazon.Domain\\SEDC.Lamazon.Domain.csproj": {
               "projectPath": "C:\\Users\\Hristijan\\Desktop\\Lamazon\\SEDC.Lamazon\\SEDC.Lamazon.Domain\\SEDC.Lamazon.Domain.csproj"
+            },
+            "C:\\Users\\Hristijan\\Desktop\\Lamazon\\SEDC.Lamazon\\SEDC.Lamazon.WebModels\\SEDC.Lamazon.WebModels.csproj": {
+              "projectPath": "C:\\Users\\Hristijan\\Desktop\\Lamazon\\SEDC.Lamazon\\SEDC.Lamazon.WebModels\\SEDC.Lamazon.WebModels.csproj"
             }
           }
         }

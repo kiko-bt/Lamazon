@@ -9,7 +9,8 @@
       "SEDC.Lamazon.Services/1.0.0": {
         "dependencies": {
           "SEDC.Lamazon.DataAccess": "1.0.0",
-          "SEDC.Lamazon.Domain": "1.0.0"
+          "SEDC.Lamazon.Domain": "1.0.0",
+          "SEDC.Lamazon.WebModels": "1.0.0"
         },
         "runtime": {
           "SEDC.Lamazon.Services.dll": {}
@@ -850,6 +851,11 @@
         "runtime": {
           "SEDC.Lamazon.Domain.dll": {}
         }
+      },
+      "SEDC.Lamazon.WebModels/1.0.0": {
+        "runtime": {
+          "SEDC.Lamazon.WebModels.dll": {}
+        }
       }
     }
   },
@@ -1467,6 +1473,11 @@
       "sha512": ""
     },
     "SEDC.Lamazon.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SEDC.Lamazon.WebModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

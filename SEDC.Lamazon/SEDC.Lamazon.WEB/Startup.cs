@@ -1,15 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SEDC.Lamazon.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using SEDC.Lamazon.DataAccess.Interfaces;
+using SEDC.Lamazon.DataAccess.Repositories;
+using SEDC.Lamazon.Services.Helpers;
+using SEDC.Lamazon.Services.Interfaces;
+using SEDC.Lamazon.Services.Services;
 
 namespace SEDC.Lamazon.WEB
 {
@@ -29,13 +27,13 @@ namespace SEDC.Lamazon.WEB
 
 
 
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IProductService, ProductService>();
 
 
-            //Database connection
             string connectionString = Configuration.GetValue<string>("LamazonConnectionString");
-
-            services.AddDbContext<LamazonDbContext>(options =>
-                                                    options.UseSqlServer(connectionString));
+            DIModule.RegisterModule(services, connectionString);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

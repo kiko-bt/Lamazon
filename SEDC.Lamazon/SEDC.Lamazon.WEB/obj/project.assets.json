@@ -1300,13 +1300,24 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "SEDC.Lamazon.DataAccess": "1.0.0",
-          "SEDC.Lamazon.Domain": "1.0.0"
+          "SEDC.Lamazon.Domain": "1.0.0",
+          "SEDC.Lamazon.WebModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SEDC.Lamazon.Services.dll": {}
         },
         "runtime": {
           "bin/placeholder/SEDC.Lamazon.Services.dll": {}
+        }
+      },
+      "SEDC.Lamazon.WebModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SEDC.Lamazon.WebModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEDC.Lamazon.WebModels.dll": {}
         }
       }
     }
@@ -5005,6 +5016,11 @@
       "type": "project",
       "path": "../SEDC.Lamazon.Services/SEDC.Lamazon.Services.csproj",
       "msbuildProject": "../SEDC.Lamazon.Services/SEDC.Lamazon.Services.csproj"
+    },
+    "SEDC.Lamazon.WebModels/1.0.0": {
+      "type": "project",
+      "path": "../SEDC.Lamazon.WebModels/SEDC.Lamazon.WebModels.csproj",
+      "msbuildProject": "../SEDC.Lamazon.WebModels/SEDC.Lamazon.WebModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

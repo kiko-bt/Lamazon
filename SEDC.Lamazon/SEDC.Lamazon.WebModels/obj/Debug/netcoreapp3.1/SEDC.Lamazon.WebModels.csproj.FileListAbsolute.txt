@@ -1,0 +1,8 @@
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.deps.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.AssemblyInfoInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.AssemblyInfo.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.csproj.CoreCompileInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WebModels\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.pdb
