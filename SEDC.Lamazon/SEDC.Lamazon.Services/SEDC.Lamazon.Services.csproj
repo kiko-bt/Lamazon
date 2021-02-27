@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SEDC.Lamazon.DataAccess\SEDC.Lamazon.DataAccess.csproj" />
     <ProjectReference Include="..\SEDC.Lamazon.Domain\SEDC.Lamazon.Domain.csproj" />
     <ProjectReference Include="..\SEDC.Lamazon.WebModels\SEDC.Lamazon.WebModels.csproj" />

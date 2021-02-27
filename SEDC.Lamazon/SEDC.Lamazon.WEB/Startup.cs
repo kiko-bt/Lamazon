@@ -1,10 +1,9 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SEDC.Lamazon.DataAccess.Interfaces;
-using SEDC.Lamazon.DataAccess.Repositories;
 using SEDC.Lamazon.Services.Helpers;
 using SEDC.Lamazon.Services.Interfaces;
 using SEDC.Lamazon.Services.Services;
@@ -30,6 +29,9 @@ namespace SEDC.Lamazon.WEB
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IProductService, ProductService>();
+
+
+            services.AddAutoMapper();
 
 
             string connectionString = Configuration.GetValue<string>("LamazonConnectionString");

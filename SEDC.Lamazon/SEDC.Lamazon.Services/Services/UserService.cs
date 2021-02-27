@@ -16,12 +16,12 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        public void Register(User registerModel)
+        public void Register(RegisterViewModel registerModel)
         {
             throw new NotImplementedException();
         }
 
-        public void LogIn(User logIn)
+        public void LogIn(UserViewModel logIn)
         {
             throw new NotImplementedException();
         }
