@@ -1,0 +1,51 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1 class="text-center mt-3" id="welcomeLogin">Welcome</h1>
+
+
+<!-- CONTACT -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group py-2">
+                            <label asp-for="Username"></label>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                                <input type="text" asp-for="Username" id="inputUsername" class="form-control" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-label-group">
+                            <label asp-for="Password">Password</label>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-file-lock2-fill"></i></span>
+                                <input type="password" asp-for="Password" id="inputPassword" class="form-control" required autofocus>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox py-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember me</label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" id="loginBtn">Sign in</button>
+
+                        <br />
+
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                <p>Don't have an account yet? <a asp-action="Register" asp-controller="User">Register here</a> and proceed buying!</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

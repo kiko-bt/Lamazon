@@ -148,6 +148,11 @@ C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netco
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Test.cshtml.g.cs
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Product\Products.cshtml.g.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\User\Login.cshtml.g.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Order\ListOrders.cshtml.g.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Order\ListAllOrders.cshtml.g.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Order\Order.cshtml.g.cs

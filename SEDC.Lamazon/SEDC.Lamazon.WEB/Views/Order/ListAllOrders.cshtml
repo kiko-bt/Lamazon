@@ -1,0 +1,70 @@
+﻿@model List<OrderViewModel>
+@{
+    ViewData["Title"] = "ListAllOrders";
+}
+
+<h1>All Users orders</h1>
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Status</th>
+                <th scope="col">Price</th>
+                <th scope="col">User full name</th>
+                <th scope="col">Products</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.Status</td>
+                    <td>@order.Price</td>
+                    <td>@order.User.Fullname</td>
+                    @{ 
+                        int i = 0;
+                    }
+                <td>
+                    @foreach (var product in order.Products)
+                    {
+                        i++;
+                        if (order.Products.Count() == i)
+                        {
+                            <span>@product.Name</span>
+                        }
+                        else
+                        {
+                            <span>@product.Name,</span>
+                        }
+                    }
+                </td>
+                    @if (order.Status == StatusTypeViewModel.Pending)
+                    {
+                        <td>
+                            <a asp-action="approveOrder" asp-controller="Order" asp-route-orderId="@order.Id" class="btn btn-primary">Approve</a>
+                            <a asp-action="declineOrder" asp-controller="Order" asp-route-orderId="@order.Id" class="btn btn-primary">Decline</a>
+                        </td>
+                    }
+                    else if (order.Status == StatusTypeViewModel.Confirmed)
+                    {
+                        <td>Waiting to be delivered</td>
+                    }
+                    else if(order.Status == StatusTypeViewModel.Declined)
+                    {
+                        <td>You have sucessfully declined this order!</td>
+                    }
+                    else
+                    {
+                        <td>Waiting for customer!</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

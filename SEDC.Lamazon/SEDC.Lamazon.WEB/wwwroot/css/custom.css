@@ -2,3 +2,48 @@
     background-color: #fff
 }
 
+#registerBtn {
+    border-radius: 28px;
+}
+
+
+#loginBtn {
+    border-radius: 28px;
+}
+
+form .card-footer {
+    border-top: 1px solid blue;
+}
+
+
+#welcomeLogin {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+li {
+    font-weight: bold;
+    color: black;
+}
+
+li .nav-link {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+
+.btn.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn.btn-primary:focus {
+    outline: 0;
+}
+
+

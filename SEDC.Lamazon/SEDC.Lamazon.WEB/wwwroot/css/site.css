@@ -12,6 +12,18 @@ a {
   color: #0366d6;
 }
 
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-image {
+    width: 250px !important;
+    height: 300px !important;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
