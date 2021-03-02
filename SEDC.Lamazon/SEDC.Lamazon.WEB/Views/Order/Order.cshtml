@@ -1,0 +1,44 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1 class="text-center py-4">Order</h1>
+
+
+
+<ul class="list-group py-5">
+    <li class="list-group-item list-group-item-primary">
+        <label asp-for="User.Fullname"></label>
+        <p>@Model.User.Fullname</p>
+    </li>
+    <li class="list-group-item list-group-item-success">
+        <label asp-for="Status"></label>
+        <p>@Model.Status <i class="bi bi-check"></i></p>
+    </li>
+    <li class="list-group-item list-group-item-secondary">
+        <label asp-for="Price"></label>
+        <p>@Model.Price$</p>
+    </li>
+    <li class="list-group-item list-group-item-danger">
+        <label asp-for="Products"></label>
+        @if (Model.Products.Count() > 0)
+        {
+            <ul class="list-group list-group-flush">
+                @foreach (var product in Model.Products)
+                {
+                    <li class="ml-3">@product.Name - @product.Price$</li>
+                }
+            </ul>
+            @if (Model.Status == StatusTypeViewModel.Init)
+            {
+                <a asp-controller="Order" asp-action="ChangeStatus" asp-route-statusId="1" class="btn btn-primary">Proceed</a>
+            }
+        }
+        else
+        {
+            <p>Cart is empty!</p>
+        }
+    </li>
+</ul>
+

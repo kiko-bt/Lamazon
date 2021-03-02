@@ -14,7 +14,7 @@ namespace SEDC.Lamazon.Domain.Models
         public StatusType Status { get; set; }
         public bool IsPaid { get; set; }
         public DateTime DateOfOrder { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
         public List<ProductOrder> ProductOrders { get; set; }
     }

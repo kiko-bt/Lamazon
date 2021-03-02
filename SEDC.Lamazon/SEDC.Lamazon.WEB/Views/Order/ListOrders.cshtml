@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ListOrders";
+}
+
+@model List<OrderViewModel>
+
+<h1>Orders history</h1>
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Status</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.Status</td>
+                    <td>@order.Price</td>
+                    <td>
+                        <a asp-action="OrderDetails" asp-controller="Order" asp-route-orderId="@order.Id" class="btn btn-primary">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

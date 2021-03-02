@@ -1,0 +1,29 @@
+﻿@model List<ProductViewModel>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1 class="text-center mt-2">Products</h1>
+
+
+
+<div class="card-columns">
+        @foreach (var product in Model)
+        {
+            <div class="card m-3">
+                <div class="container">
+                    <div class="row">
+                        <img class="card-img-top img-fluid" src="/images/Products/product-@(product.Id).png" alt="product">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">@product.Name</h4>
+                        <h4 class="card-title">@product.Description</h4>
+                        <h4 class="card-title">@product.Price$</h4>
+                        <p class="card-text text-center">
+                            <button class="btn btn-primary">Add to card</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+</div>
