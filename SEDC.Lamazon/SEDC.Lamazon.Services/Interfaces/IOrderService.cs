@@ -8,13 +8,12 @@ namespace SEDC.Lamazon.Services.Interfaces
 {
     public interface IOrderService
     {
-        //TODO: Change all the User domain models with appropriate ViewModel!!!
         IEnumerable<OrderViewModel> GetAllOrders();
-        OrderViewModel GetOrderById(int id, int userId);
+        OrderViewModel GetOrderById(int id, string userId);
         OrderViewModel GetOrderById(int id);
-        int CreateOrder(OrderViewModel orderm, int userId);
-        int AddProduct(int productId, int orderId, int userId);
-        OrderViewModel GetCurrentOrder(int userId);
-        int ChangeStatus(int orderId, int userId, StatusTypeViewModel status);
+        int CreateOrder(OrderViewModel order, string userId);
+        int AddProduct(int orderId, int productId, string userId);
+        OrderViewModel GetCurrentOrder(string userId);
+        int ChangeStatus(int orderId, string userId, StatusTypeViewModel status);
     }
 }

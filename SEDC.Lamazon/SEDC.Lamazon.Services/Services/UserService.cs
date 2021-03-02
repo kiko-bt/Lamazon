@@ -1,29 +1,72 @@
-﻿using SEDC.Lamazon.DataAccess.Interfaces;
+﻿using Microsoft.AspNetCore.Identity;
+using SEDC.Lamazon.DataAccess.Interfaces;
+using SEDC.Lamazon.Domain.Enum;
 using SEDC.Lamazon.Domain.Models;
 using SEDC.Lamazon.Services.Interfaces;
 using SEDC.Lamazon.WebModels.ViewModels;
 using System;
+using System.Collections.Generic;
 
 namespace SEDC.Lamazon.Services.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepository;
+        protected readonly IUserRepository _userRepository;
+        protected readonly SignInManager<User> _signInManager;
+        protected readonly UserManager<User> _userManager;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository,
+                           SignInManager<User> signInManager,
+                           UserManager<User> userManager)
         {
             _userRepository = userRepository;
+            _signInManager = signInManager;
+            _userManager = userManager;
         }
 
 
         public void Register(RegisterViewModel registerModel)
         {
-            throw new NotImplementedException();
+            User user = new User
+            {
+                UserName = registerModel.Username,
+                FullName = String.Format("{0} {1}", registerModel.FirstName, registerModel.LastName),
+                Email = registerModel.Email,
+                Orders = new List<Order>()
+                {
+                    new Order
+                    {
+                        Status = StatusType.Init
+                    }
+                }
+            };
+
+
+            var password = registerModel.Password;
+
+            var result = _userManager.CreateAsync(user, password).Result;
+
+            if (result.Succeeded)
+            {
+                var currentUser = _userManager.FindByNameAsync(user.UserName).Result;
+                _userManager.AddToRoleAsync(user, "user");
+
+                LogIn(new LoginViewModel
+                {
+                    Username = registerModel.Username,
+                    Password = registerModel.Password
+                });
+            }
         }
 
-        public void LogIn(UserViewModel logIn)
+        public void LogIn(LoginViewModel loginModel)
         {
-            throw new NotImplementedException();
+            var result = _signInManager.PasswordSignInAsync(loginModel.Username, loginModel.Password, false, false).Result;
+
+            if (result.IsNotAllowed)
+            {
+                throw new Exception("Username or Password is not correct");
+            }
         }
 
         public UserViewModel GetCurrentUser(string username)
@@ -35,8 +78,8 @@ namespace SEDC.Lamazon.Services.Services
                 return new UserViewModel
                 {
                     Id = user.Id,
-                    Username = user.Username,
-                    Fullname = string.Format("{0} {1}", user.FirstName, user.LastName)
+                    Username = user.UserName,
+                    Fullname = user.FullName
                 };
             }
             catch(Exception ex)
@@ -48,7 +91,7 @@ namespace SEDC.Lamazon.Services.Services
 
         public void LogOut()
         {
-            throw new NotImplementedException();
+            _signInManager.SignOutAsync();
         }
     }
 }

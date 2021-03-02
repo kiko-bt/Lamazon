@@ -13,7 +13,7 @@
             <div class="card card-signin my-5">
                 <div class="card-body">
                     <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin">
+                    <form class="form-signin" asp-action="LogIn" asp-controller="User" method="post">
                         <div class="form-label-group py-2">
                             <label asp-for="Username"></label>
                             <div class="input-group-prepend">

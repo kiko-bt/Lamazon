@@ -18,7 +18,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse justify-content-end">
                     <ul class="navbar-nav my-sm-auto">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -29,16 +29,45 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Contact</a>
                         </li>
+
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="ListAllOrders">All Orders</a>
+                            </li>
+                        }
+                        else
+                        {
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="Order">Current Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="ListOrders">My Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Product" asp-action="Products">Products</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="User" asp-action="Logout">LogOut</a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="Order">Current Orders</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="ListOrders">My Orders</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Order" asp-action="ListAllOrders">All Orders</a>
+                            <a class="nav-link text-light" asp-controller="User" asp-action="LogIn">Login</a>
                         </li>
                     </ul>
+                    }
                 </div>
             </div>
         </nav>

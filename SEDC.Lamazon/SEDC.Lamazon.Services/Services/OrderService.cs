@@ -30,7 +30,6 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        //TODO: Refactor the code when ViewModels will be implemented
         public IEnumerable<OrderViewModel> GetAllOrders()
         {
             IEnumerable<Order> orders = _orderRepository.GetAll();
@@ -40,7 +39,7 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        public OrderViewModel GetCurrentOrder(int userId)
+        public OrderViewModel GetCurrentOrder(string userId)
         {
             try
             {
@@ -60,7 +59,7 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        public OrderViewModel GetOrderById(int id, int userId)
+        public OrderViewModel GetOrderById(int id, string userId)
         {
             try
             {
@@ -79,7 +78,7 @@ namespace SEDC.Lamazon.Services.Services
             catch (Exception ex)
             {
                 string message = ex.Message;
-                throw new NotImplementedException(message);
+                throw new Exception(message);
             }
         }
 
@@ -98,7 +97,7 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        public int AddProduct(int productId, int orderId, int userId)
+        public int AddProduct(int productId, int orderId, string userId)
         {
             try
             {
@@ -122,17 +121,15 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
-        public int CreateOrder(OrderViewModel order, int userId)
+        public int CreateOrder(OrderViewModel order, string userId)
         {
             try
             {
-                //User user = _userRepository.GetById(userId);
+                User user = _userRepository.GetById(userId);
+                Order mappedOrder = _mapper.Map<Order>(order);
 
-                //order.User = user;
-
-                //return _orderRepository.Insert(order);
-
-                throw new NotImplementedException();
+                mappedOrder.User = user;
+                return _orderRepository.Insert(mappedOrder);
             }
             catch (Exception ex)
             {
@@ -141,7 +138,7 @@ namespace SEDC.Lamazon.Services.Services
             }
         }
 
-        public int ChangeStatus(int orderId, int userId, StatusTypeViewModel status)
+        public int ChangeStatus(int orderId, string userId, StatusTypeViewModel status)
         {
             try
             {

@@ -3,22 +3,27 @@
     ViewData["Title"] = "Products";
 }
 
-<h1>Products</h1>
+<h1 class="text-center mt-2">Products</h1>
 
-<div class="products">
-    @foreach (var product in Model)
-    {
-        <div class="img-thumbnail">
-            <img class="product-image" src="/images/Products/product-@(product.Id).png" alt="Product Image" />
-            <div class="caption">
-                <h3>@product.Name</h3>
-                <h4>@product.Description</h4>
-                <h5>@product.Price$</h5>
-                <p>
-                    <button class="btn btn-primary">Add to card</button>
-                </p>
+
+
+<div class="card-columns">
+        @foreach (var product in Model)
+        {
+            <div class="card m-3">
+                <div class="container">
+                    <div class="row">
+                        <img class="card-img-top img-fluid" src="/images/Products/product-@(product.Id).png" alt="product">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">@product.Name</h4>
+                        <h4 class="card-title">@product.Description</h4>
+                        <h4 class="card-title">@product.Price$</h4>
+                        <p class="card-text text-center">
+                            <button class="btn btn-primary">Add to card</button>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    }
+        }
 </div>
-

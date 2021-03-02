@@ -15,9 +15,12 @@ namespace SEDC.Lamazon.Services.Helpers
                 .ForMember(dest => dest.Quantity, src => src.Ignore())
                 .ReverseMap();
 
+            
 
-            CreateMap<User, UserViewModel>()
-                .ForMember(dest => dest.Fullname, src => src.MapFrom(y => String.Format("{0} {1}", y.FirstName, y.LastName)));
+            //CreateMap<User, UserViewModel>()
+            //    .ForMember(dest => dest.Fullname, src => src.MapFrom(y => String.Format("{0} {1}", y.FirstName, y.LastName)));
+
+
 
             CreateMap<Order, OrderViewModel>()
                 .ForMember(dest => dest.Price, src => src.Ignore())

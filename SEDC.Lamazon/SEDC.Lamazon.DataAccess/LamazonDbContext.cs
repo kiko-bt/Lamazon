@@ -1,11 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SEDC.Lamazon.Domain.Enum;
 using SEDC.Lamazon.Domain.Models;
 using System;
 
 namespace SEDC.Lamazon.DataAccess
 {
-    public class LamazonDbContext : DbContext
+    public class LamazonDbContext : IdentityDbContext<User>
     {
         public LamazonDbContext(DbContextOptions options)
             :base(options) { }
@@ -13,161 +15,79 @@ namespace SEDC.Lamazon.DataAccess
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
-
-
 
         public void Seed(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Role>()
+            //SEED USERS USING IDENTITY MANAGER AS AUTHENTICATION
+            string adminId = Guid.NewGuid().ToString();
+            string roleId = Guid.NewGuid().ToString();
+            string userRoleId = Guid.NewGuid().ToString();
+
+
+
+            var hasher = new PasswordHasher<User>();
+
+
+            modelBuilder.Entity<User>()
                         .HasData(
-                        new Role
+                        new User
                         {
-                            Id = 1,
-                            Name = "Admin"
-                        },
-                        new Role
-                        {
-                            Id = 2,
-                            Name = "Supplier"
-                        },
-                        new Role
-                        {
-                            Id = 3,
-                            Name = "Customer"
+                            Id = adminId,
+                            UserName = "admin",
+                            NormalizedUserName = "ADMIN",
+                            Email = "lamazon@supply.com",
+                            NormalizedEmail = "lamazon@supply.com",
+                            EmailConfirmed = true,
+                            PasswordHash = hasher.HashPassword(null, "Admin123#"),
+                            SecurityStamp = string.Empty
                         });
 
 
 
-            modelBuilder.Entity<User>()
-            .HasData(
-                new User
-                {
-                    Id = 1,
-                    FirstName = "Hristijan",
-                    LastName = "Petrovski",
-                    Username = "ChrisP",
-                    Password = "kiko12345",
-                    Address = "Slavko Lumbarkovski 16",
-                    Age = 26,
-                    RoleId = 2
-                },
-                new User
-                {
-                    Id = 2,
-                    FirstName = "Mario",
-                    LastName = "Zdravkovski",
-                    Username = "MarioZ",
-                    Password = "marioBt",
-                    Address = "Partizanska 39",
-                    Age = 27,
-                    RoleId = 2
-                },
-                new User
-                {
-                    Id = 3,
-                    FirstName = "Petar",
-                    LastName = "Todorovski",
-                    Username = "Peckata",
-                    Password = "peroVoVero",
-                    Address = "Bela Cesma 10",
-                    Age = 29,
-                    RoleId = 2
-                });
+
+            modelBuilder.Entity<IdentityRole>()
+                        .HasData(
+                            new IdentityRole
+                            {
+                                Id = roleId,
+                                Name = "admin",
+                                NormalizedName = "ADMIN"
+                            },
+                            new IdentityRole
+                            {
+                                Id = userRoleId,
+                                Name = "user",
+                                NormalizedName = "USER"
+                            });
 
 
 
-            modelBuilder.Entity<Order>()
-            .HasData(
-                new Order
-                {
-                    Id = 1,
-                    Status = StatusType.Init,
-                    IsPaid = false,
-                    DateOfOrder = DateTime.Now,
-                    UserId = 1
-                },
-                new Order
-                {
-                    Id = 2,
-                    Status = StatusType.Pending,
-                    IsPaid = false,
-                    DateOfOrder = DateTime.Now,
-                    UserId = 2
-                },
-                new Order
-                {
-                    Id = 3,
-                    Status = StatusType.Confirmed,
-                    IsPaid = false,
-                    DateOfOrder = DateTime.Now,
-                    UserId = 3
-                });
+
+            modelBuilder.Entity<IdentityUserRole<string>>()
+                        .HasData(
+                            new IdentityUserRole<string>
+                            {
+                                RoleId = roleId,
+                                UserId = adminId
+                            });
 
 
 
             modelBuilder.Entity<Product>()
                         .HasData(
-                        new Product
-                        {
-                            Id = 1,
-                            Name = "Samsung Galaxy S20",
-                            Price = 1000,
-                            Description = "The best samsung phone on the market",
-                            Category = CategoryType.Electronics
-                        },
-                        new Product
-                        {
-                            Id = 2,
-                            Name = "Ice",
-                            Price = 2,
-                            Description = "Full bag of ice for your party",
-                            Category = CategoryType.Other
-                        },
-                        new Product
-                        {
-                            Id = 3,
-                            Name = "Johnnie Walker",
-                            Price = 30,
-                            Description = "Scotch wiskey",
-                            Category = CategoryType.Drinks
-                        },
-                        new Product
-                        {
-                            Id = 4,
-                            Name = "Harry Potter",
-                            Price = 15,
-                            Description = "The last book of Harry Potter",
-                            Category = CategoryType.Books
-                        });
-
-            modelBuilder.Entity<ProductOrder>()
-                        .HasData(
-                        new ProductOrder
-                        {
-                            Id = 1,
-                            OrderId = 1,
-                            ProductId = 1
-                        },
-                        new ProductOrder
-                        {
-                            Id = 2,
-                            OrderId = 2,
-                            ProductId = 3
-                        },
-                        new ProductOrder
-                        {
-                            Id = 3,
-                            OrderId = 3,
-                            ProductId = 2
-                        },
-                        new ProductOrder
-                        {
-                            Id = 4,
-                            OrderId = 3,
-                            ProductId = 1
-                        });     
+                            new Product() { Id = 1, Name = "Samsung A40", Price = 200, Description = "Very good phone. Bad batery", Category = CategoryType.Electronics },
+                            new Product() { Id = 2, Name = "SSD 1TB", Price = 400, Description = "Large SSD of high quality", Category = CategoryType.Electronics },
+                            new Product() { Id = 3, Name = "C# in depth", Price = 40, Description = "C# Book for everyone", Category = CategoryType.Books },
+                            new Product() { Id = 4, Name = "Clean Code", Price = 60, Description = "Book for clean code", Category = CategoryType.Books },
+                            new Product() { Id = 5, Name = "Rakija", Price = 20, Description = "Magical Elixir of Power", Category = CategoryType.Drinks },
+                            new Product() { Id = 6, Name = "Sparkling Water", Price = 2, Description = "When you have too much Rakija", Category = CategoryType.Drinks },
+                            new Product() { Id = 7, Name = "Meze", Price = 15, Description = "All in one pack of appetizers", Category = CategoryType.Food },
+                            new Product() { Id = 8, Name = "Stew in a can", Price = 8, Description = "Stew for good morning", Category = CategoryType.Food },
+                            new Product() { Id = 9, Name = "Glasses set", Price = 10, Description = "Set of 6 glasses", Category = CategoryType.Other },
+                            new Product() { Id = 10, Name = "Plastic knives and forks", Price = 4, Description = "Set of 20 plastic knives and forks", Category = CategoryType.Other },
+                            new Product() { Id = 11, Name = "Ice", Price = 3, Description = "A bag of ice", Category = CategoryType.Other },
+                            new Product() { Id = 12, Name = "Plastic plates", Price = 5, Description = "Plates for the whole family", Category = CategoryType.Other }
+                        );    
         }
 
 
@@ -197,13 +117,6 @@ namespace SEDC.Lamazon.DataAccess
                         .HasMany(p => p.ProductOrders)
                         .WithOne(p => p.Product)
                         .HasForeignKey(p => p.ProductId);
-
-
-            modelBuilder.Entity<Role>()
-                        .HasMany(r => r.Users)
-                        .WithOne(u => u.Role)
-                        .HasForeignKey(u => u.RoleId);
-
 
 
 

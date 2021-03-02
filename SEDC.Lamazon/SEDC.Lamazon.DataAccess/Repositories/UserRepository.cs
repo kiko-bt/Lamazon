@@ -16,14 +16,14 @@ namespace SEDC.Lamazon.DataAccess.Repositories
             return _db.Users;
         }
 
-        public User GetById(int id)
+        public User GetById(string id)
         {
             return _db.Users.SingleOrDefault(x => x.Id == id);
         }
 
         public User GetByUsername(string username)
         {
-            return _db.Users.SingleOrDefault(x => x.Username == username);
+            return _db.Users.SingleOrDefault(x => x.UserName == username);
         }
 
         public int Insert(User entity)
@@ -38,7 +38,7 @@ namespace SEDC.Lamazon.DataAccess.Repositories
             return _db.SaveChanges();
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
            User user = _db.Users.SingleOrDefault(x => x.Id == id);
             if (user == null)

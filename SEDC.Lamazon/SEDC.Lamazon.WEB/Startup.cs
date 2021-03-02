@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using SEDC.Lamazon.Services.Helpers;
 using SEDC.Lamazon.Services.Interfaces;
 using SEDC.Lamazon.Services.Services;
+using System;
 
 namespace SEDC.Lamazon.WEB
 {
@@ -31,6 +32,19 @@ namespace SEDC.Lamazon.WEB
             services.AddTransient<IProductService, ProductService>();
 
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                options.LoginPath = "/User/Login";
+                options.AccessDeniedPath = "/User/Login";
+                options.SlidingExpiration = true;
+            });
+
+
+
+
+
             services.AddAutoMapper();
 
 
@@ -51,12 +65,14 @@ namespace SEDC.Lamazon.WEB
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
+
+            //Using authentication
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
