@@ -31,6 +31,7 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Contact</a>
                         </li>
 
+
                         @if (User.IsInRole("admin"))
                         {
                             <li class="nav-item">
@@ -55,16 +56,16 @@
                     </ul>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-controller="User" asp-action="Logout">LogOut</a>
+                        <ul class="navbar-nav my-sm-auto">
+                            <li class="nav-item float-right">
+                                <a class="nav-link text-light" asp-controller="User" asp-action="LogOut">Logout</a>
                             </li>
                         </ul>
                     }
                     else
                     {
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item">
+                        <ul class="navbar-nav my-sm-auto">
+                            <li class="nav-item float-right">
                                 <a class="nav-link text-light" asp-controller="User" asp-action="LogIn">Login</a>
                             </li>
                         </ul>
