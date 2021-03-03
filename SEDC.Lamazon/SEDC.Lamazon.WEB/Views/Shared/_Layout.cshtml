@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -62,11 +63,11 @@
                     }
                     else
                     {
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-controller="User" asp-action="LogIn">Login</a>
-                        </li>
-                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="User" asp-action="LogIn">Login</a>
+                            </li>
+                        </ul>
                     }
                 </div>
             </div>
@@ -80,12 +81,13 @@
 
     <footer class="border-top footer text-muted">
         <div class="container text-center text-dark">
-            &copy; 2021 - Lamazon Store 
+            &copy; 2021 - Lamazon Store
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("NToastNotify")
     @RenderSection("Scripts", required: false)
 </body>
 </html>

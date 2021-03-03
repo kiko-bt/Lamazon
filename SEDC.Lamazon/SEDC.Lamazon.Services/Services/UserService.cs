@@ -15,6 +15,7 @@ namespace SEDC.Lamazon.Services.Services
         protected readonly SignInManager<User> _signInManager;
         protected readonly UserManager<User> _userManager;
 
+
         public UserService(IUserRepository userRepository,
                            SignInManager<User> signInManager,
                            UserManager<User> userManager)
@@ -24,13 +25,12 @@ namespace SEDC.Lamazon.Services.Services
             _userManager = userManager;
         }
 
-
         public void Register(RegisterViewModel registerModel)
         {
             User user = new User
             {
                 UserName = registerModel.Username,
-                FullName = String.Format("{0} {1}", registerModel.FirstName, registerModel.LastName),
+                FullName = String.Format("{0} {1}", registerModel.Firstname, registerModel.Lastname),
                 Email = registerModel.Email,
                 Orders = new List<Order>()
                 {
@@ -41,31 +41,42 @@ namespace SEDC.Lamazon.Services.Services
                 }
             };
 
-
             var password = registerModel.Password;
 
             var result = _userManager.CreateAsync(user, password).Result;
-
+            bool isAdmin = false;
             if (result.Succeeded)
             {
                 var currentUser = _userManager.FindByNameAsync(user.UserName).Result;
-                _userManager.AddToRoleAsync(user, "user");
-
-                LogIn(new LoginViewModel
+                var roleResult = _userManager.AddToRoleAsync(currentUser, "user").Result;
+                if (roleResult.Succeeded)
                 {
-                    Username = registerModel.Username,
-                    Password = registerModel.Password
-                });
+                    Login(new LoginViewModel
+                    {
+                        Username = registerModel.Username,
+                        Password = registerModel.Password
+                    }, out isAdmin);
+                }
+                else
+                {
+                    throw new Exception("Adding user to a role failed!");
+                }
             }
         }
 
-        public void LogIn(LoginViewModel loginModel)
+        public void Login(LoginViewModel loginModel, out bool isAdmin)
         {
             var result = _signInManager.PasswordSignInAsync(loginModel.Username, loginModel.Password, false, false).Result;
+            User user = _userRepository.GetByUsername(loginModel.Username);
+            isAdmin = false;
 
+            if (result.Succeeded)
+            {
+                isAdmin = _userManager.IsInRoleAsync(user, "admin").Result;
+            }
             if (result.IsNotAllowed)
             {
-                throw new Exception("Username or Password is not correct");
+                throw new Exception("Username or Password is not correct!");
             }
         }
 
@@ -74,7 +85,6 @@ namespace SEDC.Lamazon.Services.Services
             try
             {
                 User user = _userRepository.GetByUsername(username);
-
                 return new UserViewModel
                 {
                     Id = user.Id,
@@ -82,16 +92,17 @@ namespace SEDC.Lamazon.Services.Services
                     Fullname = user.FullName
                 };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string message = ex.Message;
                 throw new Exception(message);
             }
         }
 
-        public void LogOut()
+        public void Logout()
         {
             _signInManager.SignOutAsync();
         }
+
     }
 }

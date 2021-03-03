@@ -18,15 +18,17 @@
                             <label asp-for="Username"></label>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                                <input type="text" asp-for="Username" id="inputUsername" class="form-control" required autofocus>
+                                <input type="text" asp-for="Username" id="inputUsername" class="form-control">
                             </div>
+                            <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
                         <div class="form-label-group">
                             <label asp-for="Password">Password</label>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-file-lock2-fill"></i></span>
-                                <input type="password" asp-for="Password" id="inputPassword" class="form-control" required autofocus>
+                                <input type="password" asp-for="Password" id="inputPassword" class="form-control">
                             </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
                         <div class="custom-control custom-checkbox py-3">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -47,5 +49,3 @@
         </div>
     </div>
 </div>
-
-

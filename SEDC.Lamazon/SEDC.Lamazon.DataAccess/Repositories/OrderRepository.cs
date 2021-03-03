@@ -8,18 +8,15 @@ namespace SEDC.Lamazon.DataAccess.Repositories
 {
     public class OrderRepository : BaseRepository, IRepository<Order>
     {
-        public OrderRepository(LamazonDbContext context) 
-            :base(context) { }
-
+        public OrderRepository(LamazonDbContext context) : base(context) { }
 
         public IEnumerable<Order> GetAll()
         {
             return _db.Orders
-                    .Include(x => x.ProductOrders)
-                    .ThenInclude(x => x.Product)
-                    .Include(x => x.User);
+                .Include(x => x.ProductOrders)
+                .ThenInclude(x => x.Product)
+                .Include(x => x.User);
         }
-
 
         public Order GetById(int id)
         {
@@ -44,12 +41,11 @@ namespace SEDC.Lamazon.DataAccess.Repositories
 
         public int Delete(int id)
         {
-            Order order = _db.Orders.SingleOrDefault();
+            Order order = _db.Orders.SingleOrDefault(x => x.Id == id);
+
             if (order == null)
                 return -1;
-
             _db.Orders.Remove(order);
-
             return _db.SaveChanges();
         }
     }

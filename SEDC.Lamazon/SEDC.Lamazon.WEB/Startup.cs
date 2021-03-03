@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NToastNotify;
 using SEDC.Lamazon.Services.Helpers;
 using SEDC.Lamazon.Services.Interfaces;
 using SEDC.Lamazon.Services.Services;
@@ -26,6 +27,9 @@ namespace SEDC.Lamazon.WEB
             services.AddControllersWithViews();
 
 
+            string connectionString = Configuration.GetValue<string>("LamazonConnectionString");
+            DIModule.RegisterModule(services, connectionString);
+
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IOrderService, OrderService>();
@@ -36,20 +40,25 @@ namespace SEDC.Lamazon.WEB
             {
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-                options.LoginPath = "/User/Login";
-                options.AccessDeniedPath = "/User/Login";
+                options.LoginPath = "/User/LogIn";
+                options.AccessDeniedPath = "/User/LogIn";
                 options.SlidingExpiration = true;
             });
-
-
 
 
 
             services.AddAutoMapper();
 
 
-            string connectionString = Configuration.GetValue<string>("LamazonConnectionString");
-            DIModule.RegisterModule(services, connectionString);
+
+            services.AddMvc().AddNToastNotifyToastr(new ToastrOptions()
+            {
+                ProgressBar = true,
+                PositionClass = ToastPositions.TopCenter
+            });
+
+
+            services.AddMvc().AddNToastNotifyToastr();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,10 +78,12 @@ namespace SEDC.Lamazon.WEB
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseAuthorization();
 
             //Using authentication
             app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseNToastNotify();
 
             app.UseEndpoints(endpoints =>
             {

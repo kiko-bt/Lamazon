@@ -1,4 +1,5 @@
-﻿@model List<ProductViewModel>
+﻿
+@model List<ProductViewModel>
 @{
     ViewData["Title"] = "Products";
 }
@@ -6,24 +7,49 @@
 <h1 class="text-center mt-2">Products</h1>
 
 
-
 <div class="card-columns">
-        @foreach (var product in Model)
-        {
-            <div class="card m-3">
-                <div class="container">
-                    <div class="row">
-                        <img class="card-img-top img-fluid" src="/images/Products/product-@(product.Id).png" alt="product">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">@product.Name</h4>
-                        <h4 class="card-title">@product.Description</h4>
-                        <h4 class="card-title">@product.Price$</h4>
-                        <p class="card-text text-center">
-                            <button class="btn btn-primary">Add to card</button>
-                        </p>
-                    </div>
+    @foreach (var product in Model)
+    {
+        <div class="card m-3">
+            <div class="container">
+                <div class="row">
+                    <img class="card-img-top img-fluid" src="/images/Products/product-@(product.Id).png" alt="product">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">@product.Name</h4>
+                    <h4 class="card-title">@product.Description</h4>
+                    <h4 class="card-title">@product.Price$</h4>
+                    <p class="card-text text-center">
+                        <button class="btn btn-primary">Add to card</button>
+                    </p>
                 </div>
             </div>
-        }
+        </div>
+    }
 </div>
+
+<script type="text/javascript">
+    let products = document.getElementsByClassName("products")[0];
+    products.addEventListener('click', function (e) {
+        e.stopPropagation();
+        let target = e.target;
+        let targetId = target.classList.contains('productItem') ? target.value : null;
+        if (targetId != null) {
+            addToCart(targetId);
+        }
+    });
+    function addToCart(targetId) {
+        fetch("/Order/AddProduct?productId=" + targetId, {
+            method: "post"
+        })
+            .then(res => {
+                if (res >= 0) {
+                    alert("Successfully added!");
+                }
+                else {
+                    alert("Something went wrong! Try again later!");
+                }
+            })
+            .catch(err => alert(err));
+    }
+</script>

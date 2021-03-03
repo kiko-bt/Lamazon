@@ -1,6 +1,4 @@
-﻿using SEDC.Lamazon.Domain.Enum;
-using SEDC.Lamazon.Domain.Models;
-using SEDC.Lamazon.WebModels.Enum;
+﻿using SEDC.Lamazon.WebModels.Enum;
 using SEDC.Lamazon.WebModels.ViewModels;
 using System.Collections.Generic;
 

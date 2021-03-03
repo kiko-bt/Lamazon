@@ -1,6 +1,5 @@
 ﻿using SEDC.Lamazon.DataAccess.Interfaces;
 using SEDC.Lamazon.Domain.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,7 +8,6 @@ namespace SEDC.Lamazon.DataAccess.Repositories
     public class UserRepository : BaseRepository, IUserRepository
     {
         public UserRepository(LamazonDbContext context) : base(context) { }
-
 
         public IEnumerable<User> GetAll()
         {
@@ -40,7 +38,8 @@ namespace SEDC.Lamazon.DataAccess.Repositories
 
         public int Delete(string id)
         {
-           User user = _db.Users.SingleOrDefault(x => x.Id == id);
+            User user = _db.Users.SingleOrDefault(x => x.Id == id);
+
             if (user == null)
                 return -1;
 

@@ -12,10 +12,8 @@ namespace SEDC.Lamazon.Services.Helpers
     {
         public static IServiceCollection RegisterModule(IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<LamazonDbContext>(options =>
-                                                    options.UseSqlServer(connectionString));
-
-
+            services.AddDbContext<LamazonDbContext>
+                (options => options.UseSqlServer(connectionString));
 
             services.AddIdentity<User, IdentityRole>(options =>
             {
@@ -26,13 +24,9 @@ namespace SEDC.Lamazon.Services.Helpers
             .AddEntityFrameworkStores<LamazonDbContext>()
             .AddDefaultTokenProviders();
 
-
-
-
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IRepository<Order>, OrderRepository>();
             services.AddTransient<IRepository<Product>, ProductRepository>();
-
 
             return services;
         }

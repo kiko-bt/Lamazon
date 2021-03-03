@@ -3,8 +3,10 @@ C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Services.pdb
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.pdb
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.pdb
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.csprojAssemblyReference.cache
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.AssemblyInfoInputs.cache
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.AssemblyInfo.cs
@@ -12,5 +14,3 @@ C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.csproj.CopyComplete
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\obj\Debug\netcoreapp3.1\SEDC.Lamazon.Services.pdb
-C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.dll
-C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.Services\bin\Debug\netcoreapp3.1\SEDC.Lamazon.WebModels.pdb
