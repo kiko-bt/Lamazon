@@ -135,7 +135,7 @@ namespace SEDC.Lamazon.Web.Controllers
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult ChangeStatus(int orderId, int statusId)
+        public IActionResult ChangeStatus(int statusId, int orderId)
         {
             try
             {
