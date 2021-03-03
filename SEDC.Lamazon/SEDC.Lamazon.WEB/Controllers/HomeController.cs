@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SEDC.Lamazon.WEB.Models;
+using SEDC.Lamazon.Web.Models;
 using System.Diagnostics;
 
 namespace SEDC.Lamazon.WEB.Controllers

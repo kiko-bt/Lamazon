@@ -13,12 +13,12 @@ namespace SEDC.Lamazon.Services.Services
 {
     public class OrderService : IOrderService
     {
-        private readonly IRepository<Product> _productRepository;
-        private readonly IRepository<Order> _orderRepository;
-        private readonly IUserRepository _userRepository;
-        private readonly IMapper _mapper;
+        protected readonly IRepository<Product> _productRepository;
+        protected readonly IRepository<Order> _orderRepository;
+        protected readonly IUserRepository _userRepository;
+        protected readonly IMapper _mapper;
 
-        public OrderService(IRepository<Product> productRepository, 
+        public OrderService(IRepository<Product> productRepository,
                             IRepository<Order> orderRepository,
                             IUserRepository userRepository,
                             IMapper mapper)
@@ -29,15 +29,13 @@ namespace SEDC.Lamazon.Services.Services
             _mapper = mapper;
         }
 
-
+        //TODO: Refactor the code when ViewModels will be implemented
         public IEnumerable<OrderViewModel> GetAllOrders()
         {
             IEnumerable<Order> orders = _orderRepository.GetAll();
             List<OrderViewModel> mappedOrders = _mapper.Map<List<OrderViewModel>>(orders);
-
             return mappedOrders;
         }
-
 
         public OrderViewModel GetCurrentOrder(string userId)
         {
@@ -46,9 +44,7 @@ namespace SEDC.Lamazon.Services.Services
                 Order order = _orderRepository.GetAll()
                                               .Where(x => x.UserId == userId)
                                               .LastOrDefault();
-
                 OrderViewModel mappedOrder = _mapper.Map<OrderViewModel>(order);
-
                 return mappedOrder;
             }
             catch (Exception ex)
@@ -58,13 +54,12 @@ namespace SEDC.Lamazon.Services.Services
             }
         }
 
-
         public OrderViewModel GetOrderById(int id, string userId)
         {
             try
             {
-               User user = _userRepository.GetById(userId);
-               Order order = _orderRepository.GetById(id);
+                User user = _userRepository.GetById(userId);
+                Order order = _orderRepository.GetById(id);
 
                 if (user.Id == order.UserId)
                 {
@@ -91,35 +86,36 @@ namespace SEDC.Lamazon.Services.Services
             }
             catch (Exception ex)
             {
-                string message = $"Order not exists! {ex.InnerException}";
+                string message = $"Order not exist! {ex.InnerException}";
                 throw new Exception(message, ex);
             }
         }
 
-
-        public int AddProduct(int productId, int orderId, string userId)
+        public int AddProduct(int orderId, int productId, string userId)
         {
             try
             {
                 Product product = _productRepository.GetById(productId);
                 Order order = _orderRepository.GetById(orderId);
+
                 User user = _userRepository.GetById(userId);
 
-
                 order.ProductOrders.Add(
-                                    new ProductOrder
-                                    {
-                                        Product = product,
-                                        Order = order
-                                    });
-
+                        new ProductOrder
+                        {
+                            Product = product,
+                            Order = order
+                        }
+                    );
                 order.User = user;
                 return _orderRepository.Update(order);
             }
-            catch (Exception ex) { string message = ex.Message; throw new NotImplementedException(message); }
-            
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw new Exception(message);
+            }
         }
-
 
         public int CreateOrder(OrderViewModel order, string userId)
         {
@@ -129,13 +125,15 @@ namespace SEDC.Lamazon.Services.Services
                 Order mappedOrder = _mapper.Map<Order>(order);
 
                 mappedOrder.User = user;
+
                 return _orderRepository.Insert(mappedOrder);
             }
             catch (Exception ex)
             {
                 string message = ex.Message;
-                throw new NotImplementedException(message);
+                throw new Exception(message);
             }
+
         }
 
         public int ChangeStatus(int orderId, string userId, StatusTypeViewModel status)
@@ -150,20 +148,20 @@ namespace SEDC.Lamazon.Services.Services
                 if (status == StatusTypeViewModel.Pending)
                 {
                     _orderRepository.Insert(
-                                    new Order
-                                    {
-                                        User = user,
-                                        DateOfOrder = DateTime.Now,
-                                        Status = StatusType.Init
-                                    });
+                            new Order
+                            {
+                                User = user,
+                                DateOfOrder = DateTime.Now,
+                                Status = StatusType.Init,
+                            }
+                        );
                 }
-
                 return _orderRepository.Update(order);
             }
             catch (Exception ex)
             {
                 string message = ex.Message;
-                throw new NotImplementedException(message);
+                throw new Exception(message);
             }
         }
     }

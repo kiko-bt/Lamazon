@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SEDC.Lamazon.Services.Interfaces;
 using SEDC.Lamazon.WebModels.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Serilog;
 
-namespace SEDC.Lamazon.WEB.Controllers
+namespace SEDC.Lamazon.Web.Controllers
 {
     public class ProductController : Controller
     {
@@ -16,11 +17,17 @@ namespace SEDC.Lamazon.WEB.Controllers
             _productService = productService;
         }
 
-
+        [Authorize(Roles = "user")]
         public IActionResult Products()
         {
-            List<ProductViewModel> products = _productService.GetAllProduct().ToList();
+            Log.Information("Fetching all products started");
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
+            List<ProductViewModel> products = _productService.GetAllProducts().ToList();
+
+            stopwatch.Stop();
+            Log.Information($"Time for fetching all products: {stopwatch.ElapsedMilliseconds}ms");
             return View(products);
         }
     }

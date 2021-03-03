@@ -1,4 +1,6 @@
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.deps.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.runtimeconfig.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.runtimeconfig.dev.json
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.pdb
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.Domain.dll
@@ -10,6 +12,4 @@ C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\obj\Debu
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\obj\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.csproj.CopyComplete
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\obj\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\obj\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.pdb
-C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.runtimeconfig.json
-C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\bin\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.runtimeconfig.dev.json
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.DataAccess\obj\Debug\netcoreapp3.1\SEDC.Lamazon.DataAccess.genruntimeconfig.cache

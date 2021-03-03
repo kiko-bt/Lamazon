@@ -3,14 +3,12 @@ using SEDC.Lamazon.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SEDC.Lamazon.DataAccess.Repositories
 {
     public class ProductRepository : BaseRepository, IRepository<Product>
     {
         public ProductRepository(LamazonDbContext context) : base(context) { }
-
 
 
         public IEnumerable<Product> GetAll()

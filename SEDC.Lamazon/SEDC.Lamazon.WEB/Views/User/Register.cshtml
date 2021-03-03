@@ -12,20 +12,22 @@
             <form asp-action="Register" asp-controller="User" method="post">
                 <div class="form-group py-1 d-flex justify-content-center">
                     <div class="col-md-6">
-                        <label asp-for="FirstName"></label>
+                        <label asp-for="Firstname"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                            <input type="text" asp-for="FirstName" class="form-control" placeholder="Firstname">
+                            <input type="text" asp-for="Firstname" class="form-control" placeholder="Firstname">
                         </div>
+                            <span asp-validation-for="Firstname" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group py-1 d-flex justify-content-center">
                     <div class="col-md-6">
-                        <label asp-for="LastName"></label>
+                        <label asp-for="Lastname"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                            <input type="text" asp-for="LastName" class="form-control" placeholder="Lastname">
+                            <input type="text" asp-for="Lastname" class="form-control" placeholder="Lastname">
                         </div>
+                            <span asp-validation-for="Lastname" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group py-1 d-flex justify-content-center">
@@ -33,8 +35,9 @@
                         <label asp-for="Email"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-fill"></i></span>
-                            <input type="email" asp-for="Email" class="form-control" placeholder="Email" required autofocus>
+                            <input type="email" asp-for="Email" class="form-control" placeholder="Email">
                         </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group py-1 d-flex justify-content-center">
@@ -42,8 +45,9 @@
                         <label asp-for="Address"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-house-door-fill"></i></span>
-                            <input type="text" asp-for="Address" class="form-control" placeholder="Address" required autofocus>
+                            <input type="text" asp-for="Address" class="form-control" placeholder="Address">
                         </div>
+                            <span asp-validation-for="Address" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group py-1 d-flex justify-content-center">
@@ -51,8 +55,9 @@
                         <label asp-for="Username"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-file-earmark-person-fill"></i></span>
-                            <input type="text" asp-for="Username" class="form-control" placeholder="Username" required autofocus>
+                            <input type="text" asp-for="Username" class="form-control" placeholder="Username">
                         </div>
+                            <span asp-validation-for="Username" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
@@ -60,15 +65,17 @@
                         <label asp-for="Password"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-file-lock2-fill"></i></span>
-                            <input type="password" asp-for="Password" class="form-control" placeholder="Password" required autofocus>
+                            <input type="password" asp-for="Password" class="form-control" placeholder="Password">
                         </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="col-md-3">
                         <label asp-for="ConfirmPassword"></label>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
-                            <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" required autofocus>
+                            <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password">
                         </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group d-flex justify-content-center py-5">
@@ -80,6 +87,3 @@
         </div>
     </div>
 </div>
-
-
-

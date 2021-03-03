@@ -1,6 +1,4 @@
-using System;
-
-namespace SEDC.Lamazon.WEB.Models
+namespace SEDC.Lamazon.Web.Models
 {
     public class ErrorViewModel
     {
