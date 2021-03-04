@@ -447,3 +447,4 @@ C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netco
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\NToastNotify.Views.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\bin\Debug\netcoreapp3.1\NToastNotify.dll
 C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\SEDC.Lamazon.WEB.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ErrorView.cshtml.g.cs

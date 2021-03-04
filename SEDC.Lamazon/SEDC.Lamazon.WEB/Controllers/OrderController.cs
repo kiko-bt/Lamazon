@@ -43,7 +43,7 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "admin")]
@@ -58,13 +58,12 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "user")]
         public IActionResult OrderDetails(int orderId)
         {
-
             try
             {
                 UserViewModel user = _userService.GetCurrentUser(User.Identity.Name);
@@ -99,7 +98,7 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "admin")]
@@ -115,7 +114,7 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "admin")]
@@ -131,7 +130,7 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "user")]
@@ -147,7 +146,7 @@ namespace SEDC.Lamazon.Web.Controllers
             {
                 Log.Error($"Message: {ex.Message} | Exception: {ex.InnerException}");
             }
-            return PartialView("ErrorView");
+            return PartialView("_ErrorView");
         }
 
         [Authorize(Roles = "user")]
