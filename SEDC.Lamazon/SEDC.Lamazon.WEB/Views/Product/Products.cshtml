@@ -31,6 +31,7 @@
 
 
 <script type="text/javascript">
+
     let products = document.getElementsByClassName("card-columns")[0];
     products.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -40,7 +41,7 @@
 
         if (targetId != null) {
             addToCart(targetId);
-            alert("Sucessfully added!");
+            alert("Successfully added!")
         }
     });
 
