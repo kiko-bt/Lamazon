@@ -37,14 +37,14 @@ namespace SEDC.Lamazon.Web.Controllers
                     _userService.Login(model, out isAdmin);
                     if (isAdmin)
                     {
-                        _toastNotification.AddSuccessToastMessage($"Welcome {model.Username}. You are logged in as an admin!");
+                        _toastNotification.AddSuccessToastMessage($"Welcome {model.Username}. You are logged in as an admin");
 
                         Log.Debug($"User with username {model.Username} successfully logged in! Admin user");
                         return RedirectToAction("listallorders", "order");
                     }
                     else
                     {
-                        _toastNotification.AddSuccessToastMessage($"Welcome {model.Username}. You are logged in as a customer!");
+                        _toastNotification.AddSuccessToastMessage($"Welcome {model.Username}. You are logged in as a customer");
 
                         Log.Debug($"User with username {model.Username} successfully logged in! Customer user");
                         return RedirectToAction("products", "product");
@@ -72,6 +72,8 @@ namespace SEDC.Lamazon.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     _userService.Register(model);
+                    _toastNotification.AddSuccessToastMessage($"You have successfully registered your account");
+                    Log.Debug($"{model.Username} have successfully registered");
                     return RedirectToAction("products", "product");
                 }
             }
