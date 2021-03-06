@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDC.Lamazon.Domain", "SEDC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDC.Lamazon.Services", "SEDC.Lamazon.Services\SEDC.Lamazon.Services.csproj", "{708C0BA8-3D52-44E4-B3CF-1EF3699AA95A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.Lamazon.WebModels", "SEDC.Lamazon.WebModels\SEDC.Lamazon.WebModels.csproj", "{3ADA00E2-4BE7-4126-ADBA-02CBAC9691AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDC.Lamazon.WebModels", "SEDC.Lamazon.WebModels\SEDC.Lamazon.WebModels.csproj", "{3ADA00E2-4BE7-4126-ADBA-02CBAC9691AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDC.Lamazon.Performance.CheckAPI", "SEDC.Lamazon.Performance.CheckAPI\SEDC.Lamazon.Performance.CheckAPI.csproj", "{E976D11B-2DED-42AF-B813-23B09024370A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.Lamazon.ConsoleApplication", "SEDC.Lamazon.ConsoleApplication\SEDC.Lamazon.ConsoleApplication.csproj", "{8748BC13-A070-4248-A883-46F27A2EB7CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{3ADA00E2-4BE7-4126-ADBA-02CBAC9691AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADA00E2-4BE7-4126-ADBA-02CBAC9691AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADA00E2-4BE7-4126-ADBA-02CBAC9691AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E976D11B-2DED-42AF-B813-23B09024370A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E976D11B-2DED-42AF-B813-23B09024370A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E976D11B-2DED-42AF-B813-23B09024370A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E976D11B-2DED-42AF-B813-23B09024370A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8748BC13-A070-4248-A883-46F27A2EB7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8748BC13-A070-4248-A883-46F27A2EB7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8748BC13-A070-4248-A883-46F27A2EB7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8748BC13-A070-4248-A883-46F27A2EB7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

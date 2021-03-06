@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SEDC.Lamazon.DataAccess.Migrations
 {
-    public partial class AuthenticationConfiguration_Init : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,25 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Invoices",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InvoiceNumber = table.Column<long>(nullable: false),
+                    From = table.Column<string>(nullable: true),
+                    To = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: false),
+                    Tax = table.Column<double>(nullable: false),
+                    PaymentType = table.Column<int>(nullable: false),
+                    Total = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Invoices", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -198,11 +217,18 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     ProductId = table.Column<int>(nullable: false),
                     OrderId = table.Column<int>(nullable: false),
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InvoiceId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductOrders", x => new { x.ProductId, x.OrderId });
+                    table.ForeignKey(
+                        name: "FK_ProductOrders_Invoices_InvoiceId",
+                        column: x => x.InvoiceId,
+                        principalTable: "Invoices",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ProductOrders_Orders_OrderId",
                         column: x => x.OrderId,
@@ -222,14 +248,14 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "ccde06e0-b1d9-4443-a44e-eff06ed45b7e", "0db6f5d8-a5a7-40c8-9e65-83b10be75246", "admin", "ADMIN" },
-                    { "c8c84341-984d-4b0c-ab4a-83e55fcc0b88", "665936b3-c772-4fcc-a65b-cb836f6b53f9", "user", "USER" }
+                    { "42d83f89-ed47-4e36-a563-72966cae7bb6", "069d1d31-ab65-489f-ab49-1fd38385220b", "admin", "ADMIN" },
+                    { "21615ebf-0300-40ba-8b29-d2bfd836a609", "4c4da02f-be26-4446-ac9b-7a1bec283c2f", "user", "USER" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "c0c8881f-b4f4-48d1-bf48-af4d138bcf0d", 0, "37b898c5-8d7c-4284-93fd-22f9a07d5740", "lamazon@supply.com", true, null, false, null, "lamazon@supply.com", "ADMIN", "AQAAAAEAACcQAAAAEHOWNMZMAhId0/IG6Kue5sv3XOez++UVd2ADyUpvfYymwoGcREiSCRvFq3Apv0NF/w==", null, false, "", false, "admin" });
+                values: new object[] { "b66cded2-a0eb-4cc4-919b-b44b5c993022", 0, "ecd5d741-daa1-4e4e-8ae1-20b1dc1a28b6", "lamazon@supply.com", true, null, false, null, "lamazon@supply.com", "ADMIN", "AQAAAAEAACcQAAAAENZdZRj9bAMIsqkHbxQ12n1FBF8Nw00yM2+boMsF509Zi9nqgA90bfL/lwn+5lXf6A==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "Products",
@@ -253,7 +279,7 @@ namespace SEDC.Lamazon.DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "UserId", "RoleId" },
-                values: new object[] { "c0c8881f-b4f4-48d1-bf48-af4d138bcf0d", "ccde06e0-b1d9-4443-a44e-eff06ed45b7e" });
+                values: new object[] { "b66cded2-a0eb-4cc4-919b-b44b5c993022", "42d83f89-ed47-4e36-a563-72966cae7bb6" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -300,6 +326,11 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductOrders_InvoiceId",
+                table: "ProductOrders",
+                column: "InvoiceId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductOrders_OrderId",
                 table: "ProductOrders",
                 column: "OrderId");
@@ -327,6 +358,9 @@ namespace SEDC.Lamazon.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Invoices");
 
             migrationBuilder.DropTable(
                 name: "Orders");

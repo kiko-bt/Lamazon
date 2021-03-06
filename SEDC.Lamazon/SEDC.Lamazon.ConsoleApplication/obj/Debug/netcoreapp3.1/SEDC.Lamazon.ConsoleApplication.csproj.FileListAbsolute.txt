@@ -1,0 +1,13 @@
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.exe
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.deps.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.runtimeconfig.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.runtimeconfig.dev.json
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\bin\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.AssemblyInfoInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.AssemblyInfo.cs
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.csproj.CoreCompileInputs.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.dll
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.pdb
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.genruntimeconfig.cache
+C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.ConsoleApplication\obj\Debug\netcoreapp3.1\SEDC.Lamazon.ConsoleApplication.csprojAssemblyReference.cache
