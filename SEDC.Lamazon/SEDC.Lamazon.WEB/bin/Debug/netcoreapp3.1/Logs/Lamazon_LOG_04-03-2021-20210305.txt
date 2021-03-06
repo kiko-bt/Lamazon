@@ -1,0 +1,1075 @@
+
+ [Debug] () Hosting starting
+
+ [Information] () User profile is available. Using '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+
+ [Debug] () Reading data from file '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys\key-283938ea-5ef5-487b-994e-9ef84d0140ec.xml"'.
+
+ [Debug] () Reading data from file '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys\key-6188e9d9-820f-4c71-8a8a-c37e3c144670.xml"'.
+
+ [Debug] () Found key {283938ea-5ef5-487b-994e-9ef84d0140ec}.
+
+ [Debug] () Found key {6188e9d9-820f-4c71-8a8a-c37e3c144670}.
+
+ [Debug] () Considering key {6188e9d9-820f-4c71-8a8a-c37e3c144670} with expiration date 2021-03-10 18:22:48Z as default key.
+
+ [Debug] () Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+
+ [Debug] () Decrypting secret element using Windows DPAPI.
+
+ [Debug] () Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+
+ [Debug] () Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+
+ [Debug] () Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+
+ [Debug] () Using key {6188e9d9-820f-4c71-8a8a-c37e3c144670} as the default key.
+
+ [Debug] () Key ring with default key {6188e9d9-820f-4c71-8a8a-c37e3c144670} was loaded during application startup.
+
+ [Debug] () Loaded hosting startup assembly "SEDC.Lamazon.WEB"
+
+ [Information] () Application started. Press Ctrl+C to shut down.
+
+ [Information] () Hosting environment: "Development"
+
+ [Information] () Content root path: "C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB"
+
+ [Debug] () Hosting started
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/  
+
+ [Debug] () Wildcard detected, all requests with hosts will be allowed.
+
+ [Debug] () The request path "/" does not match a supported file type
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Home/Index.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Home/Privacy.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/ListAllOrders.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/ListOrders.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/Order.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Product/Products.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Error.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_ErrorView.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_Layout.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_ValidationScriptsPartial.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/User/Login.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/User/Register.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/_ViewImports.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/_ViewStart.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Components/NToastNotify/Default.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Components/NToastNotify/Default.cshtml"'.
+
+ [Debug] () 1 candidate(s) found for the request path '"/"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Debug] () Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+
+ [Information] () Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache miss for view '"Index"' in controller '"Home"'.
+
+ [Information] () Executing ViewResult, running view "Index".
+
+ [Debug] () The view path '"/Views/Home/Index.cshtml"' was found in 4.9649ms.
+
+ [Debug] () View lookup cache miss for view '"_Layout"' in controller '"Home"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 84.7571ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache miss for view '"Components/NToastNotify/Default"' in controller '"Home"'.
+
+ [Information] () Executed ViewResult - view "Index" executed in 181.4863ms.
+
+ [Information] () Executed action "SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)" in 184.0557ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 247.8466ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/css/custom.css  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/css/not-found.css  
+
+ [Information] () The file "/css/not-found.css" was not modified
+
+ [Information] () The file "/css/custom.css" was not modified
+
+ [Debug] () Handled. Status code: 304 File: "/css/not-found.css"
+
+ [Debug] () Handled. Status code: 304 File: "/css/custom.css"
+
+ [Information] () Request finished in 4.7394ms 304 text/css
+
+ [Information] () Request finished in 4.7406ms 304 text/css
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/js/site.js?v=PtWwbNxDMFDekh-IA8aybh9tmNONBBAq5OTa1c0VnIU  
+
+ [Information] () The file "/js/site.js" was not modified
+
+ [Debug] () Handled. Status code: 304 File: "/js/site.js"
+
+ [Information] () Request finished in 0.4241ms 304 application/javascript
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/Home/Privacy  
+
+ [Debug] () The request path "/Home/Privacy" does not match a supported file type
+
+ [Debug] () 1 candidate(s) found for the request path '"/Home/Privacy"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/Home/Privacy"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"Privacy\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Privacy()" on controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache miss for view '"Privacy"' in controller '"Home"'.
+
+ [Information] () Executing ViewResult, running view "Privacy".
+
+ [Debug] () The view path '"/Views/Home/Privacy.cshtml"' was found in 0.6026ms.
+
+ [Debug] () View lookup cache hit for view '"_Layout"' in controller '"Home"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 0.2621ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache hit for view '"Components/NToastNotify/Default"' in controller '"Home"'.
+
+ [Information] () Executed ViewResult - view "Privacy" executed in 8.0095ms.
+
+ [Information] () Executed action "SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)" in 8.4256ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 20.1735ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/Home/Privacy  
+
+ [Debug] () The request path "/Home/Privacy" does not match a supported file type
+
+ [Debug] () 1 candidate(s) found for the request path '"/Home/Privacy"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/Home/Privacy"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"Privacy\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Privacy()" on controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache hit for view '"Privacy"' in controller '"Home"'.
+
+ [Information] () Executing ViewResult, running view "Privacy".
+
+ [Debug] () The view path '"/Views/Home/Privacy.cshtml"' was found in 0.2462ms.
+
+ [Debug] () View lookup cache hit for view '"_Layout"' in controller '"Home"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 0.2303ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache hit for view '"Components/NToastNotify/Default"' in controller '"Home"'.
+
+ [Information] () Executed ViewResult - view "Privacy" executed in 3.2208ms.
+
+ [Information] () Executed action "SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)" in 3.4963ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Privacy (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 8.4784ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/  
+
+ [Debug] () The request path "/" does not match a supported file type
+
+ [Debug] () 1 candidate(s) found for the request path '"/"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache hit for view '"Index"' in controller '"Home"'.
+
+ [Information] () Executing ViewResult, running view "Index".
+
+ [Debug] () The view path '"/Views/Home/Index.cshtml"' was found in 0.1235ms.
+
+ [Debug] () View lookup cache hit for view '"_Layout"' in controller '"Home"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 0.2136ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache hit for view '"Components/NToastNotify/Default"' in controller '"Home"'.
+
+ [Information] () Executed ViewResult - view "Index" executed in 2.7103ms.
+
+ [Information] () Executed action "SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)" in 2.9815ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 4.6086ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/User/LogIn  
+
+ [Debug] () The request path "/User/LogIn" does not match a supported file type
+
+ [Debug] () 1 candidate(s) found for the request path '"/User/LogIn"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/User/LogIn"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"LogIn\", controller = \"User\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult LogIn()" on controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () An 'IServiceProvider' was created for internal use by Entity Framework.
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache miss for view '"LogIn"' in controller '"User"'.
+
+ [Information] () Executing ViewResult, running view "LogIn".
+
+ [Debug] () The view path '"/Views/User/Login.cshtml"' was found in 0.5679ms.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () A new antiforgery cookie token was created.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/Register" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/Register"
+
+ [Debug] () View lookup cache miss for view '"_Layout"' in controller '"User"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 0.189ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache miss for view '"Components/NToastNotify/Default"' in controller '"User"'.
+
+ [Information] () Executed ViewResult - view "LogIn" executed in 20.9624ms.
+
+ [Information] () Executed action "SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)" in 110.8152ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 114.6293ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 POST https://localhost:44323/User/LogIn application/x-www-form-urlencoded 223
+
+ [Debug] () "POST" requests are not supported
+
+ [Debug] () 2 candidate(s) found for the request path '"/User/LogIn"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/User/LogIn"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/User/LogIn"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"LogIn\", controller = \"User\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult LogIn(SEDC.Lamazon.WebModels.ViewModels.LoginViewModel)" on controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.Web.Controllers.UserController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Attempting to bind parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"' ...
+
+ [Debug] () Attempting to bind parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"' using the name '""' in request data ...
+
+ [Debug] () Attempting to bind property '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"."Username"' of type '"System.String"' using the name '"Username"' in request data ...
+
+ [Debug] () Done attempting to bind property '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"."Username"' of type '"System.String"'.
+
+ [Debug] () Attempting to bind property '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"."Password"' of type '"System.String"' using the name '"Password"' in request data ...
+
+ [Debug] () Done attempting to bind property '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"."Password"' of type '"System.String"'.
+
+ [Debug] () Done attempting to bind parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"'.
+
+ [Debug] () Done attempting to bind parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"'.
+
+ [Debug] () Attempting to validate the bound parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"' ...
+
+ [Debug] () Done attempting to validate the bound parameter '"model"' of type '"SEDC.Lamazon.WebModels.ViewModels.LoginViewModel"'.
+
+ [Debug] () Authenticating user with username: ChrisP
+
+ [Debug] () The index "{'UserId'}" was not created on entity type '"IdentityUserRole<string>"' as the properties are already covered by the index "{'UserId', 'RoleId'}".
+
+ [Debug] () The index "{'UserId'}" was not created on entity type '"IdentityUserToken<string>"' as the properties are already covered by the index "{'UserId', 'LoginProvider', 'Name'}".
+
+ [Debug] () The index "{'ProductId'}" was not created on entity type '"ProductOrder"' as the properties are already covered by the index "{'ProductId', 'OrderId'}".
+
+ [Information] () Entity Framework Core "3.1.1" initialized '"LamazonDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+
+ [Debug] () "queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: new QueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache, 
+        null, 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        SEDC.Lamazon.DataAccess.LamazonDbContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (133ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0"
+
+ [Information] () Executed DbCommand ("47"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0"
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => new QueryingEnumerable<Claim>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Claim>, 
+    SEDC.Lamazon.DataAccess.LamazonDbContext, 
+    DiagnosticsLogger<Query>
+)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+
+ [Information] () Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => new QueryingEnumerable<string>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, string>, 
+    SEDC.Lamazon.DataAccess.LamazonDbContext, 
+    DiagnosticsLogger<Query>
+)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+
+ [Information] () Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: new QueryingEnumerable<IdentityRole>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache, 
+        null, 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, IdentityRole>, 
+        SEDC.Lamazon.DataAccess.LamazonDbContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0"
+
+ [Information] () Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0"
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"IdentityRole"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => new QueryingEnumerable<Claim>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Claim>, 
+    SEDC.Lamazon.DataAccess.LamazonDbContext, 
+    DiagnosticsLogger<Query>
+)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0"
+
+ [Information] () Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0"
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Information] () AuthenticationScheme: "Identity.Application" signed in.
+
+ [Debug] () "queryContext => new QueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    SEDC.Lamazon.DataAccess.LamazonDbContext, 
+    DiagnosticsLogger<Query>
+)
+    .SingleOrDefault()"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[UserName] = @__username_0"
+
+ [Information] () Executed DbCommand ("2"ms) [Parameters=["@__username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[UserName] = @__username_0"
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: new QueryingEnumerable<IdentityRole>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache, 
+        null, 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, IdentityRole>, 
+        SEDC.Lamazon.DataAccess.LamazonDbContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0"
+
+ [Information] () Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0"
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"IdentityRole"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () "queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityUserRole<string>>(
+    asyncEnumerable: new QueryingEnumerable<IdentityUserRole<string>>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache, 
+        null, 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, IdentityUserRole<string>>, 
+        SEDC.Lamazon.DataAccess.LamazonDbContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=["@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)"
+
+ [Information] () Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)"
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () User with username ChrisP successfully logged in! Customer user
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/product/products" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/product/products"
+
+ [Information] () Executing RedirectResult, redirecting to "/product/products".
+
+ [Information] () Executed action "SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)" in 1036.9669ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.Web.Controllers.UserController.LogIn (SEDC.Lamazon.WEB)"'
+
+ [Debug] () '"LamazonDbContext"' disposed.
+
+ [Information] () Request finished in 1048.8362ms 302 
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/product/products  
+
+ [Debug] () The request path "/product/products" does not match a supported file type
+
+ [Debug] () 1 candidate(s) found for the request path '"/product/products"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.Web.Controllers.ProductController.Products (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/product/products"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.Web.Controllers.ProductController.Products (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was successfully authenticated.
+
+ [Information] () Authorization was successful.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.Web.Controllers.ProductController.Products (SEDC.Lamazon.WEB)"'
+
+ [Information] () Route matched with "{action = \"Products\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Products()" on controller "SEDC.Lamazon.Web.Controllers.ProductController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.Web.Controllers.ProductController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.Web.Controllers.ProductController" ("SEDC.Lamazon.WEB")
+
+ [Information] () Fetching all products started
+
+ [Information] () Entity Framework Core "3.1.1" initialized '"LamazonDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+
+ [Debug] () "queryContext => new QueryingEnumerable<Product>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Product>, 
+    SEDC.Lamazon.DataAccess.LamazonDbContext, 
+    DiagnosticsLogger<Query>
+)"
+
+ [Debug] () Creating DbCommand for '"ExecuteReader"'.
+
+ [Debug] () Created DbCommand for '"ExecuteReader"' (0ms).
+
+ [Debug] () Opening connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Opened connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Category], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]"
+
+ [Information] () Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Category], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]"
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () Context '"LamazonDbContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+
+ [Debug] () A data reader was disposed.
+
+ [Debug] () Closing connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Debug] () Closed connection to database '"LamazonDb"' on server '".\SQLExpress"'.
+
+ [Information] () Time for fetching all products: 37ms
+
+ [Debug] () View lookup cache miss for view '"Products"' in controller '"Product"'.
+
+ [Information] () Executing ViewResult, running view "Products".
+
+ [Debug] () The view path '"/Views/Product/Products.cshtml"' was found in 0.5181ms.
+
+ [Debug] () View lookup cache miss for view '"_Layout"' in controller '"Product"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Order/Order" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Order/Order"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Order/ListOrders" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Order/ListOrders"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Product/Products" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Product/Products"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogOut" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogOut"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was used to successfully load temp data.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 33.5206ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache miss for view '"Components/NToastNotify/Default"' in controller '"Product"'.
+
+ [Information] () Executed ViewResult - view "Products" executed in 39.2057ms.
+
+ [Information] () Executed action "SEDC.Lamazon.Web.Controllers.ProductController.Products (SEDC.Lamazon.WEB)" in 78.9015ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.Web.Controllers.ProductController.Products (SEDC.Lamazon.WEB)"'
+
+ [Debug] () '"LamazonDbContext"' disposed.
+
+ [Information] () Request finished in 85.8697ms 200 text/html; charset=utf-8

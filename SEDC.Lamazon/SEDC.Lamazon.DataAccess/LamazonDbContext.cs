@@ -15,6 +15,7 @@ namespace SEDC.Lamazon.DataAccess
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
 
 
         public void Seed(ModelBuilder modelBuilder)
@@ -90,22 +91,28 @@ namespace SEDC.Lamazon.DataAccess
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ProductOrder>()
-                .HasKey(po => new { po.ProductId, po.OrderId });
+                        .HasKey(po => new { po.ProductId, po.OrderId });
 
             modelBuilder.Entity<User>()
-                .HasMany(x => x.Orders)
-                .WithOne(x => x.User)
-                .HasForeignKey(x => x.UserId);
+                        .HasMany(x => x.Orders)
+                        .WithOne(x => x.User)
+                        .HasForeignKey(x => x.UserId);
 
             modelBuilder.Entity<Order>()
-                .HasMany(o => o.ProductOrders)
-                .WithOne(po => po.Order)
-                .HasForeignKey(po => po.OrderId);
+                        .HasMany(o => o.ProductOrders)
+                        .WithOne(po => po.Order)
+                        .HasForeignKey(po => po.OrderId);
 
             modelBuilder.Entity<Product>()
-                .HasMany(p => p.ProductOrders)
-                .WithOne(p => p.Product)
-                .HasForeignKey(p => p.ProductId);
+                        .HasMany(p => p.ProductOrders)
+                        .WithOne(p => p.Product)
+                        .HasForeignKey(p => p.ProductId);
+
+            modelBuilder.Entity<Invoice>()
+                        .HasMany(i => i.ProductOrders)
+                        .WithOne(i => i.Invoice)
+                        .HasForeignKey(i => i.InvoiceId);
+
 
             Seed(modelBuilder);
         }

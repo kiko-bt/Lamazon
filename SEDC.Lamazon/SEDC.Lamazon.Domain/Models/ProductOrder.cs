@@ -12,5 +12,7 @@ namespace SEDC.Lamazon.Domain.Models
         public Product Product { get; set; }
         public int OrderId { get; set; }
         public Order Order { get; set; }
+        public int InvoiceId { get; set; }
+        public Invoice Invoice { get; set; }
     }
 }
