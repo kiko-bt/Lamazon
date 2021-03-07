@@ -16,6 +16,7 @@ namespace SEDC.Lamazon.Domain.Models
         public DateTime DateOfOrder { get; set; }
         public string UserId { get; set; }
         public User User { get; set; }
+        public Invoice Invoice { get; set; }
         public List<ProductOrder> ProductOrders { get; set; }
     }
 }
