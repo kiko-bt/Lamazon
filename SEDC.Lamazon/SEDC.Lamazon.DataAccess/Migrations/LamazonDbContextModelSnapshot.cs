@@ -48,15 +48,15 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "42d83f89-ed47-4e36-a563-72966cae7bb6",
-                            ConcurrencyStamp = "069d1d31-ab65-489f-ab49-1fd38385220b",
+                            Id = "90b87150-87ca-46e0-a4e2-7331f2350d8a",
+                            ConcurrencyStamp = "ca3ab24b-26fa-4801-8203-e2f4afe58871",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "21615ebf-0300-40ba-8b29-d2bfd836a609",
-                            ConcurrencyStamp = "4c4da02f-be26-4446-ac9b-7a1bec283c2f",
+                            Id = "9f7f7ce4-ebf7-4b10-bc0f-0d4cdd7a1055",
+                            ConcurrencyStamp = "4eeeb340-2557-4548-9cd9-1f5f4bca6ef2",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -149,8 +149,8 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "b66cded2-a0eb-4cc4-919b-b44b5c993022",
-                            RoleId = "42d83f89-ed47-4e36-a563-72966cae7bb6"
+                            UserId = "8d0da2ce-3d7e-404f-a9f7-9f999c80258a",
+                            RoleId = "90b87150-87ca-46e0-a4e2-7331f2350d8a"
                         });
                 });
 
@@ -176,9 +176,7 @@ namespace SEDC.Lamazon.DataAccess.Migrations
             modelBuilder.Entity("SEDC.Lamazon.Domain.Models.Invoice", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -186,8 +184,8 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.Property<string>("From")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("InvoiceNumber")
-                        .HasColumnType("bigint");
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
 
                     b.Property<int>("PaymentType")
                         .HasColumnType("int");
@@ -216,6 +214,9 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.Property<DateTime>("DateOfOrder")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("InvoiceId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsPaid")
                         .HasColumnType("bit");
 
@@ -226,6 +227,8 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InvoiceId");
 
                     b.HasIndex("UserId");
 
@@ -367,7 +370,7 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("InvoiceId")
+                    b.Property<int?>("InvoiceId")
                         .HasColumnType("int");
 
                     b.HasKey("ProductId", "OrderId");
@@ -449,15 +452,15 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b66cded2-a0eb-4cc4-919b-b44b5c993022",
+                            Id = "8d0da2ce-3d7e-404f-a9f7-9f999c80258a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ecd5d741-daa1-4e4e-8ae1-20b1dc1a28b6",
+                            ConcurrencyStamp = "c5f6c7a5-d315-4c3a-afb2-fe7229f69aef",
                             Email = "lamazon@supply.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "lamazon@supply.com",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENZdZRj9bAMIsqkHbxQ12n1FBF8Nw00yM2+boMsF509Zi9nqgA90bfL/lwn+5lXf6A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEFqcZkYtEwpChjcLqinvuC6boTZ6Z1b00E/GNGEcgN9oMIahzKFjU+A18IWlwcumQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -516,8 +519,21 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SEDC.Lamazon.Domain.Models.Invoice", b =>
+                {
+                    b.HasOne("SEDC.Lamazon.Domain.Models.Order", "Order")
+                        .WithOne("Invoice")
+                        .HasForeignKey("SEDC.Lamazon.Domain.Models.Invoice", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("SEDC.Lamazon.Domain.Models.Order", b =>
                 {
+                    b.HasOne("SEDC.Lamazon.Domain.Models.Invoice", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("InvoiceId");
+
                     b.HasOne("SEDC.Lamazon.Domain.Models.User", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId");
@@ -525,11 +541,9 @@ namespace SEDC.Lamazon.DataAccess.Migrations
 
             modelBuilder.Entity("SEDC.Lamazon.Domain.Models.ProductOrder", b =>
                 {
-                    b.HasOne("SEDC.Lamazon.Domain.Models.Invoice", "Invoice")
+                    b.HasOne("SEDC.Lamazon.Domain.Models.Invoice", null)
                         .WithMany("ProductOrders")
-                        .HasForeignKey("InvoiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InvoiceId");
 
                     b.HasOne("SEDC.Lamazon.Domain.Models.Order", "Order")
                         .WithMany("ProductOrders")

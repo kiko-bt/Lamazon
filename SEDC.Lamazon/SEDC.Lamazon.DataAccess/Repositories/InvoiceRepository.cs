@@ -33,7 +33,7 @@ namespace SEDC.Lamazon.DataAccess.Repositories
             _db.Invoices.Update(entity);
             return _db.SaveChanges();
         }
-        
+
         public int Delete(int id)
         {
             Invoice invoice = _db.Invoices.SingleOrDefault(x => x.Id == id);

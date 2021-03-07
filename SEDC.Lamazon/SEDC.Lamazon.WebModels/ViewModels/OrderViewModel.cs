@@ -10,6 +10,7 @@ namespace SEDC.Lamazon.WebModels.ViewModels
         public StatusTypeViewModel Status { get; set; }
         public UserViewModel User { get; set; }
         public List<ProductViewModel> Products { get; set; }
+        public InvoiceViewModel Invoice { get; set; }
         public double Price => Products.Sum(p => p.Price);
     }
 }

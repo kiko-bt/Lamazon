@@ -109,9 +109,9 @@ namespace SEDC.Lamazon.DataAccess
                         .HasForeignKey(p => p.ProductId);
 
             modelBuilder.Entity<Invoice>()
-                        .HasMany(i => i.ProductOrders)
-                        .WithOne(i => i.Invoice)
-                        .HasForeignKey(i => i.InvoiceId);
+                         .HasOne(i => i.Order)
+                         .WithOne(i => i.Invoice)
+                         .HasForeignKey<Invoice>(i => i.Id);
 
 
             Seed(modelBuilder);

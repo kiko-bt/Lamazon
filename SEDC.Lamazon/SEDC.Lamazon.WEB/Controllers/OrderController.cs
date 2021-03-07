@@ -16,7 +16,7 @@ namespace SEDC.Lamazon.Web.Controllers
     {
         private readonly IOrderService _orderService;
         private readonly IUserService _userService;
-        private readonly IProductService _productService;
+
 
         public OrderController(IOrderService orderService,
                                IUserService userService,
@@ -24,7 +24,6 @@ namespace SEDC.Lamazon.Web.Controllers
         {
             _orderService = orderService;
             _userService = userService;
-            _productService = productService;
         }
 
         [Authorize(Roles = "user")]
@@ -102,11 +101,13 @@ namespace SEDC.Lamazon.Web.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        public IActionResult ApproveOrder(int orderId)
+        public IActionResult ApproveOrder(int orderId, int invoiceId)
         {
             try
             {
                 OrderViewModel order = _orderService.GetOrderById(orderId);
+
+
                 _orderService.ChangeStatus(order.Id, order.User.Id, StatusTypeViewModel.Confirmed);
                 return RedirectToAction("listallorders");
             }

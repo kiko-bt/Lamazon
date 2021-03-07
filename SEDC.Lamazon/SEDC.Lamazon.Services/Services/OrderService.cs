@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿    using AutoMapper;
 using SEDC.Lamazon.DataAccess.Interfaces;
 using SEDC.Lamazon.Domain.Enum;
 using SEDC.Lamazon.Domain.Models;
@@ -20,7 +20,7 @@ namespace SEDC.Lamazon.Services.Services
 
         public OrderService(IRepository<Product> productRepository,
                             IRepository<Order> orderRepository,
-                            IUserRepository userRepository,
+                            IUserRepository userRepository, 
                             IMapper mapper)
         {
             _productRepository = productRepository;
@@ -29,7 +29,7 @@ namespace SEDC.Lamazon.Services.Services
             _mapper = mapper;
         }
 
-        //TODO: Refactor the code when ViewModels will be implemented
+
         public IEnumerable<OrderViewModel> GetAllOrders()
         {
             IEnumerable<Order> orders = _orderRepository.GetAll();
@@ -133,7 +133,6 @@ namespace SEDC.Lamazon.Services.Services
                 string message = ex.Message;
                 throw new Exception(message);
             }
-
         }
 
         public int ChangeStatus(int orderId, string userId, StatusTypeViewModel status)

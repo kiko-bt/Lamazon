@@ -18,8 +18,6 @@ namespace SEDC.Lamazon.Services.Helpers
             //    .ForMember(dest => dest.Fullname, src => src.MapFrom(y => String.Format("{0} {1}", y.FirstName, y.LastName)));
 
 
-            CreateMap<Invoice, InvoiceViewModel>();
-
 
             CreateMap<Order, OrderViewModel>()
                 .ForMember(dest => dest.Price, src => src.Ignore())
