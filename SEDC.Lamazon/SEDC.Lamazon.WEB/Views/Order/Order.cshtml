@@ -15,6 +15,10 @@
     <li class="list-group-item list-group-item-success">
         <label asp-for="Status"></label>
         <p>@Model.Status <i class="bi bi-check"></i></p>
+        @if (Model.Status == StatusTypeViewModel.Confirmed)
+        {
+            <a asp-controller="Invoice" asp-action="CurrentInvoice" class="btn btn-primary">Invoice</a>
+        }
     </li>
     <li class="list-group-item list-group-item-secondary">
         <label asp-for="Price"></label>

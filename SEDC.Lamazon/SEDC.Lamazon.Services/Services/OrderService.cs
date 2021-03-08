@@ -1,4 +1,4 @@
-﻿    using AutoMapper;
+﻿using AutoMapper;
 using SEDC.Lamazon.DataAccess.Interfaces;
 using SEDC.Lamazon.Domain.Enum;
 using SEDC.Lamazon.Domain.Models;
@@ -15,17 +15,23 @@ namespace SEDC.Lamazon.Services.Services
     {
         protected readonly IRepository<Product> _productRepository;
         protected readonly IRepository<Order> _orderRepository;
+        protected readonly IRepository<Invoice> _invoiceRepository;
+        protected readonly IInvoiceService _invoiceService;
         protected readonly IUserRepository _userRepository;
         protected readonly IMapper _mapper;
 
         public OrderService(IRepository<Product> productRepository,
                             IRepository<Order> orderRepository,
+                            IInvoiceService invoiceService,
                             IUserRepository userRepository, 
+                            IRepository<Invoice> invoiceRepository,
                             IMapper mapper)
         {
             _productRepository = productRepository;
+            _invoiceService = invoiceService;
             _orderRepository = orderRepository;
             _userRepository = userRepository;
+            _invoiceRepository = invoiceRepository;
             _mapper = mapper;
         }
 
@@ -78,6 +84,7 @@ namespace SEDC.Lamazon.Services.Services
         }
 
 
+
         public OrderViewModel GetOrderById(int id)
         {
             try
@@ -99,6 +106,15 @@ namespace SEDC.Lamazon.Services.Services
                 Order order = _orderRepository.GetById(orderId);
 
                 User user = _userRepository.GetById(userId);
+
+
+                int invoice = _invoiceService.CreateInvoice(product.Id, order.Id, user.Id);
+
+
+                if (invoice == order.Id)
+                {
+                    Invoice mappedInvoice = _mapper.Map<Invoice>(order.Invoice);
+                }
 
                 order.ProductOrders.Add(
                         new ProductOrder

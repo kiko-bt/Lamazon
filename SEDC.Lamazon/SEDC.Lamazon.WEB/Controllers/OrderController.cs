@@ -19,8 +19,7 @@ namespace SEDC.Lamazon.Web.Controllers
 
 
         public OrderController(IOrderService orderService,
-                               IUserService userService,
-                               IProductService productService)
+                               IUserService userService)
         {
             _orderService = orderService;
             _userService = userService;
@@ -59,7 +58,7 @@ namespace SEDC.Lamazon.Web.Controllers
             }
             return PartialView("_ErrorView");
         }
-
+        
         [Authorize(Roles = "user")]
         public IActionResult OrderDetails(int orderId)
         {
@@ -101,7 +100,7 @@ namespace SEDC.Lamazon.Web.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        public IActionResult ApproveOrder(int orderId, int invoiceId)
+        public IActionResult ApproveOrder(int orderId)
         {
             try
             {
