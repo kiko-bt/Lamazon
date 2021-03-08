@@ -48,15 +48,15 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "90b87150-87ca-46e0-a4e2-7331f2350d8a",
-                            ConcurrencyStamp = "ca3ab24b-26fa-4801-8203-e2f4afe58871",
+                            Id = "a1db3bd6-f732-4ef7-97da-fa4548ff3e15",
+                            ConcurrencyStamp = "36af0107-83b5-406e-8254-c79c6d2e034d",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "9f7f7ce4-ebf7-4b10-bc0f-0d4cdd7a1055",
-                            ConcurrencyStamp = "4eeeb340-2557-4548-9cd9-1f5f4bca6ef2",
+                            Id = "97ad4426-19b4-4e17-9be4-2536b787afb2",
+                            ConcurrencyStamp = "479c9eab-4fa9-4193-86d8-4458225df282",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -149,8 +149,8 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "8d0da2ce-3d7e-404f-a9f7-9f999c80258a",
-                            RoleId = "90b87150-87ca-46e0-a4e2-7331f2350d8a"
+                            UserId = "e45a93f1-ec9e-44cb-abf2-acdcc9ccd86e",
+                            RoleId = "a1db3bd6-f732-4ef7-97da-fa4548ff3e15"
                         });
                 });
 
@@ -452,15 +452,15 @@ namespace SEDC.Lamazon.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "8d0da2ce-3d7e-404f-a9f7-9f999c80258a",
+                            Id = "e45a93f1-ec9e-44cb-abf2-acdcc9ccd86e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c5f6c7a5-d315-4c3a-afb2-fe7229f69aef",
+                            ConcurrencyStamp = "44f7a580-3209-4057-891d-3552440f0704",
                             Email = "lamazon@supply.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "lamazon@supply.com",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEFqcZkYtEwpChjcLqinvuC6boTZ6Z1b00E/GNGEcgN9oMIahzKFjU+A18IWlwcumQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIp9Z/Ne7OAg3LZg7UqJdAAchKR+f9haP0kQFf5FZhTWbUkQYB/BOSezw4iGMdWRog==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

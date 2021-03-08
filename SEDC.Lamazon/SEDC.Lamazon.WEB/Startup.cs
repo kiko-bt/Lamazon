@@ -34,6 +34,7 @@ namespace SEDC.Lamazon.WEB
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IInvoiceService, InvoiceService>();
 
 
             services.ConfigureApplicationCookie(options =>

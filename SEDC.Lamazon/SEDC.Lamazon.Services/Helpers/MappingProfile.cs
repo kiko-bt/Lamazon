@@ -19,6 +19,11 @@ namespace SEDC.Lamazon.Services.Helpers
 
 
 
+            CreateMap<Invoice, InvoiceViewModel>()
+                .ForMember(dest => dest.Orders, src => src.MapFrom(x => x.ProductOrders.Select(y => y.Order)));
+
+
+
             CreateMap<Order, OrderViewModel>()
                 .ForMember(dest => dest.Price, src => src.Ignore())
                 .ForMember(dest => dest.Products, src => src.MapFrom(x => x.ProductOrders.Select(y => y.Product)))
