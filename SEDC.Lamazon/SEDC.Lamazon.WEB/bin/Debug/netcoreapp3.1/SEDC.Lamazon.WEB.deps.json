@@ -32,6 +32,7 @@
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "3.4.0",
           "Serilog.Sinks.RollingFile": "3.3.0",
+          "jquery.datatables": "1.10.11",
           "Microsoft.AspNetCore.Antiforgery.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies.Reference": "3.1.0.0",
@@ -334,6 +335,12 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "jQuery/1.7.0": {},
+      "jquery.datatables/1.10.11": {
+        "dependencies": {
+          "jQuery": "1.7.0"
         }
       },
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
@@ -4386,6 +4393,20 @@
       "sha512": "sha512-7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
       "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
+    },
+    "jQuery/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UEZuBreHZNLao3z9zNPeSadyoPwKDP/5kFh+Mn1Pm9ZS0czk7bv0O6RreloGSIMAfTLZCiigNkuPb2bXKtUM+g==",
+      "path": "jquery/1.7.0",
+      "hashPath": "jquery.1.7.0.nupkg.sha512"
+    },
+    "jquery.datatables/1.10.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GIkUoIhhLh3hScqlVhIgn80YyUPcpYlDX41gGXJ5D/PZFtNX9p8hm/FQjkF/dubq49OJHHn0raCbcTWJYDFCYQ==",
+      "path": "jquery.datatables/1.10.11",
+      "hashPath": "jquery.datatables.1.10.11.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "type": "package",

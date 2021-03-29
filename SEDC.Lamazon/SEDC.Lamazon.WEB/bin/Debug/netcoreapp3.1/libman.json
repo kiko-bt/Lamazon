@@ -5,6 +5,10 @@
     {
       "library": "bootstrap-icons@1.4.0",
       "destination": "wwwroot/lib/bootstrap-icons/"
+    },
+    {
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/lib/datatables/"
     }
   ]
 }

@@ -357,6 +357,10 @@
             "Serilog.Sinks.RollingFile": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "jquery.datatables": {
+              "target": "Package",
+              "version": "[1.10.11, )"
             }
           },
           "imports": [

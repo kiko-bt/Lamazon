@@ -8,7 +8,7 @@
 
 
 <div class="container">
-    <table class="table">
+    <table id="myTable" class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -68,3 +68,12 @@
         </tbody>
     </table>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#myTable").DataTable();
+        });
+    </script>
+}
+
