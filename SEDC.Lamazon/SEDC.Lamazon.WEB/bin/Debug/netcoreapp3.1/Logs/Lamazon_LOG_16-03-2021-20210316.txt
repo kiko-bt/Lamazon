@@ -1,0 +1,238 @@
+
+ [Debug] () Hosting starting
+
+ [Information] () User profile is available. Using '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+
+ [Debug] () Reading data from file '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys\key-283938ea-5ef5-487b-994e-9ef84d0140ec.xml"'.
+
+ [Debug] () Reading data from file '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys\key-6188e9d9-820f-4c71-8a8a-c37e3c144670.xml"'.
+
+ [Debug] () Reading data from file '"C:\Users\Hristijan\AppData\Local\ASP.NET\DataProtection-Keys\key-9fd02526-3e85-4c94-b8cc-2a022d846605.xml"'.
+
+ [Debug] () Found key {283938ea-5ef5-487b-994e-9ef84d0140ec}.
+
+ [Debug] () Found key {6188e9d9-820f-4c71-8a8a-c37e3c144670}.
+
+ [Debug] () Found key {9fd02526-3e85-4c94-b8cc-2a022d846605}.
+
+ [Debug] () Considering key {9fd02526-3e85-4c94-b8cc-2a022d846605} with expiration date 2021-06-09 22:18:00Z as default key.
+
+ [Debug] () Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+
+ [Debug] () Decrypting secret element using Windows DPAPI.
+
+ [Debug] () Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+
+ [Debug] () Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+
+ [Debug] () Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+
+ [Debug] () Using key {9fd02526-3e85-4c94-b8cc-2a022d846605} as the default key.
+
+ [Debug] () Key ring with default key {9fd02526-3e85-4c94-b8cc-2a022d846605} was loaded during application startup.
+
+ [Debug] () Loaded hosting startup assembly "SEDC.Lamazon.WEB"
+
+ [Information] () Application started. Press Ctrl+C to shut down.
+
+ [Information] () Hosting environment: "Development"
+
+ [Information] () Content root path: "C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB"
+
+ [Debug] () Hosting started
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/  
+
+ [Debug] () Wildcard detected, all requests with hosts will be allowed.
+
+ [Debug] () The request path "/" does not match a supported file type
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Home/Contact.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Home/Index.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Home/Privacy.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Invoice/CurrentInvoice.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/ListAllOrders.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/ListOrders.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Order/Order.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Product/Products.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Error.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_ErrorView.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_Layout.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/_ValidationScriptsPartial.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/User/Login.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/User/Register.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/_ViewImports.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/_ViewStart.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Components/NToastNotify/Default.cshtml"'.
+
+ [Debug] () Initializing Razor view compiler with compiled view: '"/Views/Shared/Components/NToastNotify/Default.cshtml"'.
+
+ [Debug] () 1 candidate(s) found for the request path '"/"'
+
+ [Debug] () Endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/"'
+
+ [Debug] () Request matched endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Debug] () AuthenticationScheme: "Identity.Application" was not authenticated.
+
+ [Information] () Executing endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Debug] () Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+
+ [Information] () Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB").
+
+ [Debug] () Execution plan of "authorization" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+
+ [Debug] () Execution plan of "exception" filters (in the following order): ["None"]
+
+ [Debug] () Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+
+ [Debug] () Executing controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () Executed controller factory for controller "SEDC.Lamazon.WEB.Controllers.HomeController" ("SEDC.Lamazon.WEB")
+
+ [Debug] () View lookup cache miss for view '"Index"' in controller '"Home"'.
+
+ [Information] () Executing ViewResult, running view "Index".
+
+ [Debug] () The view path '"/Views/Home/Index.cshtml"' was found in 5.6635ms.
+
+ [Debug] () View lookup cache miss for view '"_Layout"' in controller '"Home"'.
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Privacy" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Privacy"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/Contact" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/Contact"
+
+ [Debug] () Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress"
+
+ [Debug] () Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/LogIn" and ""
+
+ [Debug] () Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/LogIn"
+
+ [Debug] () Executing view component "NToastNotify.NToastNotifyViewComponent" with arguments ([]).
+
+ [Debug] () The temp data cookie ".AspNetCore.Mvc.CookieTempDataProvider" was not found.
+
+ [Debug] () Executed view component "NToastNotify.NToastNotifyViewComponent" in 98.8109ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+
+ [Debug] () View lookup cache miss for view '"Components/NToastNotify/Default"' in controller '"Home"'.
+
+ [Information] () Executed ViewResult - view "Index" executed in 210.2835ms.
+
+ [Information] () Executed action "SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)" in 212.6197ms
+
+ [Information] () Executed endpoint '"SEDC.Lamazon.WEB.Controllers.HomeController.Index (SEDC.Lamazon.WEB)"'
+
+ [Information] () Request finished in 280.7684ms 200 text/html; charset=utf-8
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/css/not-found.css  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/css/site.css  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/lib/bootstrap/dist/css/bootstrap.min.css  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/css/custom.css  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/lib/bootstrap-icons/font/bootstrap-icons.min.css  
+
+ [Information] () Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\css\site.css"'
+
+ [Information] () Sending file. Request path: '"/css/not-found.css"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\css\not-found.css"'
+
+ [Information] () Sending file. Request path: '"/css/custom.css"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\css\custom.css"'
+
+ [Information] () Request finished in 16.912ms 200 text/css
+
+ [Information] () Request finished in 16.9038ms 200 text/css
+
+ [Information] () Request finished in 16.9211ms 200 text/css
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/lib/jquery/dist/jquery.min.js  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/images/lamazon.svg  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/_content/NToastNotify/toastr.js?7.0.0.0  
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/js/site.js?v=PtWwbNxDMFDekh-IA8aybh9tmNONBBAq5OTa1c0VnIU  
+
+ [Information] () Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\js\site.js"'
+
+ [Information] () Request finished in 0.6262ms 200 application/javascript
+
+ [Information] () Sending file. Request path: '"/images/lamazon.svg"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\images\lamazon.svg"'
+
+ [Information] () Request finished in 6.9799ms 200 image/svg+xml
+
+ [Information] () Sending file. Request path: '"/lib/bootstrap-icons/font/bootstrap-icons.min.css"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\lib\bootstrap-icons\font\bootstrap-icons.min.css"'
+
+ [Information] () Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"'
+
+ [Information] () Request finished in 39.3419ms 200 text/css
+
+ [Information] () Request finished in 39.3134ms 200 text/css
+
+ [Information] () Sending file. Request path: '"/_content/NToastNotify/toastr.js"'. Physical path: '"C:\Users\Hristijan\.nuget\packages\ntoastnotify\7.0.0\staticwebassets\toastr.js"'
+
+ [Information] () Request finished in 12.4895ms 200 application/javascript
+
+ [Information] () Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"'
+
+ [Information] () Request finished in 27.4803ms 200 application/javascript
+
+ [Information] () Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\lib\jquery\dist\jquery.min.js"'
+
+ [Information] () Request finished in 36.3448ms 200 application/javascript
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/lib/bootstrap-icons/font/fonts/bootstrap-icons.woff2?8bd4575acf83c7696dc7a14a966660a3  
+
+ [Information] () Sending file. Request path: '"/lib/bootstrap-icons/font/fonts/bootstrap-icons.woff2"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\lib\bootstrap-icons\font\fonts\bootstrap-icons.woff2"'
+
+ [Information] () Request finished in 8.1665ms 200 font/woff2
+
+ [Information] () Request starting HTTP/2.0 GET https://localhost:44323/favicon.ico  
+
+ [Information] () Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\Hristijan\Desktop\Lamazon\SEDC.Lamazon\SEDC.Lamazon.WEB\wwwroot\favicon.ico"'
+
+ [Information] () Request finished in 5.6559ms 200 image/x-icon

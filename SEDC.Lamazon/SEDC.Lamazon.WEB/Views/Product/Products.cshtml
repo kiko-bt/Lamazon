@@ -30,33 +30,4 @@
 </div>
 
 
-<script type="text/javascript">
-    let products = document.getElementsByClassName("card-columns")[0];
-    products.addEventListener('click', function (e) {
-        e.stopPropagation();
-        let target = e.target;
-
-        let targetId = target.classList.contains("productItem") ? target.value : null;
-
-        if (targetId != null) {
-            addToCart(targetId);
-        }
-    });
-
-
-    async function addToCart(targetId) {
-        const res = await fetch("/Order/AddProduct?productId=" + targetId,
-            {
-                method: "POST"
-            });
-        if (res >= 0) {
-            alert("Something went wrong! Try again later!");
-        }
-        else {
-            alert("Successfully added!")
-        }
-
-        const data = await res.json();
-        return data;
-    }
-</script>
+598
